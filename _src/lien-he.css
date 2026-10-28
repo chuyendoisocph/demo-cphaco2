@@ -1,0 +1,58 @@
+.phero .hsub{max-width:36em;font-size:18px;line-height:1.55}
+
+/* thông tin + biểu mẫu */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.ways{margin-top:30px;border-top:1px solid var(--ke)}
+.way{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--ke);color:var(--chu);text-decoration:none;line-height:1.55}
+.way i{width:48px;height:48px;border-radius:50%;background:var(--xanh-nhat);color:var(--xanh);display:grid;place-items:center}
+.way small{display:block;font-size:13.5px;color:var(--nhat);margin-bottom:2px}
+.way .link{display:flex;margin-top:6px;font-size:15px}
+.way a:not(.link){font-weight:600;text-decoration:none}
+.hot-way i{background:var(--gach);color:#fff}
+.hot-way b{font-size:26px;color:var(--gach);letter-spacing:.02em;line-height:1.2}
+.hot-way:hover b{color:var(--gach-dam)}
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;padding:32px;box-shadow:var(--bong),0 0 0 1px var(--ke)}
+.cform h3{grid-column:1/-1;color:var(--xanh-sau);font-size:22px}
+.cform label{font-size:13.5px;color:var(--phu);font-weight:500}
+.cform input,.cform textarea{width:100%;margin-top:5px;padding:12px 13px;border:1px solid #858F9A;font:inherit;font-size:16px;border-radius:3px;color:var(--chu);background:#fff;resize:vertical}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--xanh);box-shadow:0 0 0 3px var(--xanh-nhat)}
+.cform .full{grid-column:1/-1}
+.cform button{justify-content:center}
+.cform .ok{grid-column:1/-1;color:var(--phu)}
+
+/* bản đồ: chỉ tải Google Maps khi người xem bấm */
+.mapband{background:var(--nen)}
+/* ảnh sơ đồ tỉ lệ 2:1: cao theo bề ngang để không cắt mất tên và chú thích */
+.mapbox{position:relative;height:min(50vw,640px);overflow:hidden;background:#dfe6e0}
+.mapbox img{width:100%;height:100%;object-fit:cover;filter:saturate(.7) brightness(.85)}
+.mapbox button{white-space:nowrap;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border:0;border-radius:3px;background:#fff;color:var(--xanh-sau);font:inherit;font-weight:600;cursor:pointer;box-shadow:0 18px 40px -18px rgba(0,0,0,.5)}
+.mapbox button:hover{background:var(--xanh-nhat)}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* chi nhánh */
+.branch-list{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.branch-list article{background:#fff;padding:26px 26px 24px;box-shadow:0 0 0 1px var(--ke);display:flex;flex-direction:column}
+.branch-list h3{font-size:19px;color:var(--xanh-sau)}
+.branch-list p{color:var(--phu);margin-top:8px;font-size:15.5px;line-height:1.55}
+.branch-list .ph a{font-weight:600;text-decoration:none}
+.branch-list .link{margin-top:auto;padding-top:14px;font-size:15px}
+.branch-list .main-br{grid-column:1/-1;display:grid;grid-template-columns:320px 1fr;gap:28px;padding:0;align-items:center}
+.main-br img{width:100%;height:100%;min-height:200px;object-fit:cover}
+.main-br>div{padding:24px 28px 24px 0;display:flex;flex-direction:column}
+.main-br h3{font-size:22px}
+
+@media (max-width:1080px){
+  .contact{grid-template-columns:1fr;gap:44px}
+  .branch-list{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .phero .hsub{font-size:16px}
+  .cform{grid-template-columns:1fr;padding:22px}
+  .mapbox{height:300px}
+  .branch-list{grid-template-columns:1fr}
+  .branch-list .main-br{grid-template-columns:1fr;gap:0}
+  .main-br img{aspect-ratio:16/9;min-height:0}
+  .main-br>div{padding:22px 22px 24px}
+  .branch-list article{padding:22px}
+  .branch-list .main-br{padding:0}
+}

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khi có người thân qua đời – Hoa Viên Bình Dương</title>
+<meta name="description" content="Những việc gia đình cần ưu tiên khi có người thân qua đời và các thủ tục cần lưu ý. Tổng đài Hoa Viên Bình Dương hỗ trợ 24/7: 0818 555 444.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=585657b9">
+<script>document.documentElement.classList.add('ga');setTimeout(function(){document.documentElement.classList.remove('ga')},2500)</script>
+<style>
+.muted{color:var(--phu)}
+p.body{margin-top:18px}
+
+/* đầu trang: số tổng đài là việc đầu tiên người xem thấy */
+.urgent-hero .wrap{padding-bottom:56px}
+.callnow{display:inline-flex;align-items:center;gap:16px;margin-top:28px;padding:14px 26px 14px 14px;background:var(--gach);color:#fff;text-decoration:none;border-radius:3px;box-shadow:0 18px 40px -18px rgba(0,0,0,.6);transition:background .25s;align-self:flex-start}
+.callnow:hover{background:var(--gach-dam)}
+.callnow i{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;flex:none}
+.callnow small{display:block;font-size:14px;color:#f6dcd1;line-height:1.4}
+.callnow b{display:block;font-size:30px;letter-spacing:.02em;line-height:1.2}
+
+/* các bước + cột thủ tục */
+.now{display:grid;grid-template-columns:1.6fr 1fr;gap:64px;align-items:start}
+.tl{list-style:none;margin-top:40px;position:relative}
+.tl::before{content:"";position:absolute;left:23px;top:24px;bottom:40px;width:2px;background:#e3d3cb}
+.tl li{display:grid;grid-template-columns:48px 1fr;gap:22px;padding-bottom:34px;position:relative}
+.tl li:last-child{padding-bottom:0}
+.tl .n{width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid var(--gach);color:var(--gach);display:grid;place-items:center;font-weight:700;font-size:19px;position:relative}
+.tl li:first-child .n{background:var(--gach);color:#fff}
+.tl b{display:block;font-size:20px;color:var(--xanh-sau);line-height:1.35;padding-top:9px}
+.tl p{color:var(--phu);margin-top:6px;max-width:38em}
+.tl .link{margin-top:10px}
+.tl .links{display:flex;gap:24px;flex-wrap:wrap}
+.side{position:sticky;top:80px;display:grid;gap:18px}
+.papers{background:var(--xanh-nhat);padding:30px 30px 32px;box-shadow:inset 0 3px 0 var(--xanh)}
+.papers h3{font-size:20px;color:var(--xanh-sau)}
+.papers ol{list-style:none;counter-reset:p;margin-top:16px}
+.papers li{counter-increment:p;display:grid;grid-template-columns:34px 1fr;padding:12px 0;border-top:1px solid #cfdcea;font-weight:500;line-height:1.5}
+.papers li::before{content:counter(p);width:24px;height:24px;border-radius:50%;background:var(--xanh);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center;margin-top:1px}
+.papers .btn{margin-top:20px}
+.callcard{display:block;background:var(--gach);color:#fff;text-decoration:none;padding:24px 28px;transition:background .25s}
+.callcard:hover{background:var(--gach-dam)}
+.callcard small{font-size:14px;color:#f6dcd1}
+.callcard b{display:block;font-size:28px;letter-spacing:.02em;line-height:1.25}
+.callcard span{display:block;font-size:15px;color:#f6dcd1;margin-top:4px}
+
+/* đồng hành */
+.loved{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:center}
+.loved figure{margin:0;aspect-ratio:4/5;overflow:hidden}
+.loved figure img{width:100%;height:100%;object-fit:cover}
+.prompt{margin-top:30px;padding-top:26px;border-top:1px solid #d9dee4;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.prompt p{font-weight:600;color:var(--xanh-sau);font-size:18px;max-width:20em}
+
+/* thông tin hữu ích */
+.paths.three{grid-template-columns:repeat(3,1fr);margin-top:36px}
+.paths.three a{grid-template-columns:96px 1fr 20px;gap:16px}
+.paths.three img{width:96px;height:72px}
+
+/* dải gọi cuối trang */
+.endcall{background:var(--xanh-sau);color:#c8d6e6;padding:48px 0}
+.endcall .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.endcall p{font-size:19px}
+.endcall a{display:inline-flex;align-items:center;gap:14px;color:#fff;text-decoration:none;font-size:34px;font-weight:700;letter-spacing:.02em}
+
+@media (max-width:1080px){
+  .now,.loved{grid-template-columns:1fr;gap:40px}
+  .side{position:static;grid-template-columns:1fr 1fr;align-items:start}
+  .loved figure{aspect-ratio:16/9}
+  .paths.three{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .urgent-hero .wrap{padding-bottom:32px}
+  .callnow{padding:12px 18px 12px 12px;gap:12px}
+  .callnow i{width:44px;height:44px}
+  .callnow b{font-size:25px}
+  .callnow small{font-size:13px}
+  .side{grid-template-columns:1fr}
+  .tl li{grid-template-columns:40px 1fr;gap:16px}
+  .tl .n{width:40px;height:40px;font-size:17px}
+  .tl::before{left:19px}
+  .tl b{font-size:18px;padding-top:6px}
+  .papers{padding:24px 22px}
+  .endcall a{font-size:28px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#noi-dung">Bỏ qua, đến nội dung chính</a>
+<svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M16 3v4M8 3v4M3 11h18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v6c0 4.4 3.4 7.6 8 8 4.6-.4 8-3.6 8-8V7Z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g></symbol>
+  <symbol id="i-quote" viewBox="0 0 48 36"><path fill="currentColor" d="M0 36V22C0 9.5 6.5 2.2 19.5 0l1.8 4.6C14 6.6 10.4 10.7 10 17h9v19Zm27 0V22C27 9.5 33.5 2.2 46.5 0l1.5 4.6C41 6.6 37.4 10.7 37 17h9v19Z"/></symbol>
+</svg>
+
+<div class="top"><div class="wrap">
+  <span class="addr">Khu phố Bông Trang, phường Chánh Phú Hòa, TP. Hồ Chí Minh · 7h30 – 17h00 tất cả các ngày</span>
+  <span><a class="tre" href="https://cphaco.vn/duong-thien-thai-noi-tre-que-nha-hoi-tu/">Tặng Tre Giữ Nghề</a><span class="tre"> · </span>Tổng đài 24/7: <a href="tel:0818555444"><b>0818 555 444</b></a></span>
+</div></div>
+
+<div class="brandbar"><div class="wrap">
+  <a class="logo" href="trang-chu.html"><img src="assets/img/cpha-logo.png" alt="Logo Công ty CP Đầu tư Xây dựng Chánh Phú Hòa"><span><b>Hoa Viên Bình Dương</b><span>Công ty CP Đầu tư Xây dựng Chánh Phú Hòa</span></span></a>
+  <div class="hot">
+    <a href="tel:0818555444"><i><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="20" height="20"><use href="#i-phone"/></svg></i><span><small>Tổng đài hỗ trợ 24/7</small><b>0818 555 444</b></span></a>
+    <a class="t2" href="trang-chu.html#dat-lich"><i><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="20" height="20"><use href="#i-cal"/></svg></i><span><small>Xe đưa đón miễn phí</small><b>Đặt lịch tham quan</b></span></a>
+  </div>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Danh mục</button>
+</div></div>
+
+<nav class="main" id="nav" aria-label="Menu chính"><div class="wrap"><ul>
+  <li><a href="trang-chu.html">Trang chủ</a></li>
+  <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+  <li class="on"><a href="khi-co-nguoi-than-qua-doi.html" aria-current="page">Hỗ trợ <svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="14" height="14"><use href="#i-down"/></svg></a>
+    <ul class="sub"><li><a class="hot-link" href="khi-co-nguoi-than-qua-doi.html">Cần hỗ trợ ngay</a></li><li><a href="chuan-bi-tu-som.html">Chuẩn bị từ sớm</a></li></ul></li>
+  <li><a href="khu-mo.html">Dịch vụ <svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="14" height="14"><use href="#i-down"/></svg></a>
+    <ul class="sub"><li><a href="tang-le.html">Dịch vụ tang lễ</a></li><li><a href="khu-mo.html">Khu mộ & vị trí an nghỉ</a></li><li><a href="luu-tro-cot.html">Dịch vụ lưu tro cốt</a></li><li><a href="dich-vu-khac.html">Dịch vụ khác</a></li></ul></li>
+  <li><a href="tham-quan-360.html">Tham quan 360°</a></li>
+  <li><a href="su-kien.html">Sự kiện</a></li>
+  <li><a href="bai-viet.html">Bài viết</a></li>
+  <li><a href="chi-nhanh.html">Chi nhánh</a></li>
+  <li><a href="hoi-dap.html">Hỏi & đáp</a></li>
+  <li><a href="lien-he.html">Liên hệ</a></li>
+</ul></div></nav>
+
+<main id="noi-dung" tabindex="-1">
+<section class="phero urgent-hero">
+  <img fetchpriority="high" src="assets/img/gate.jpg" alt="Cổng Hồn Việt tại Hoa Viên Bình Dương">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Đường dẫn"><a href="trang-chu.html">Trang chủ</a><span>/</span>Hỗ trợ<span>/</span>Khi có người thân qua đời</nav>
+    <h1>Hỗ trợ tang lễ cho gia đình</h1>
+    <p>Chúng tôi sẵn sàng hỗ trợ 24/7</p>
+    <a class="callnow" href="tel:0818555444"><i><svg aria-hidden="true" width="24" height="24"><use href="#i-phone"/></svg></i><span><small>Gọi tổng đài, có người nghe máy cả ngày lẫn đêm</small><b>0818 555 444</b></span></a>
+  </div>
+</section>
+
+<section class="sec"><div class="wrap now">
+  <div>
+    <h2 class="title">Những việc gia đình cần ưu tiên</h2>
+    <p class="lead">Đội ngũ Hoa Viên luôn sẵn sàng hướng dẫn và đồng hành cùng gia đình trong từng bước.</p>
+    <ol class="tl">
+      <li><span class="n">1</span><div><b>Liên hệ nhân viên hoặc gọi tổng đài</b><p>Đội ngũ phục vụ sẵn sàng hỗ trợ và hướng dẫn gia đình những việc cần làm.</p><a class="link" href="tel:0818555444">Gọi 0818 555 444 <svg aria-hidden="true" width="16" height="16"><use href="#i-arrow"/></svg></a></div></li>
+      <li><span class="n">2</span><div><b>Lập kế hoạch tang lễ</b><p>Gia đình kiểm tra xem người đã khuất có để lại kế hoạch hoặc di nguyện hay không, sau đó trao đổi với đội ngũ tư vấn để lựa chọn dịch vụ phù hợp.</p><a class="link" href="tang-le.html">Xem dịch vụ tang lễ <svg aria-hidden="true" width="16" height="16"><use href="#i-arrow"/></svg></a></div></li>
+      <li><span class="n">3</span><div><b>An táng hay hỏa táng</b><p>Gia đình cân nhắc giữa an táng và hỏa táng dựa trên di nguyện, tín ngưỡng, nơi an nghỉ và điều kiện thực tế.</p><a class="link" href="bai-viet-an-tang-hay-hoa-tang.html">Đọc: An táng hay hỏa táng <svg aria-hidden="true" width="16" height="16"><use href="#i-arrow"/></svg></a></div></li>
+      <li><span class="n">4</span><div><b>Lựa chọn nơi an nghỉ</b><p>Nếu còn băn khoăn, gia đình có thể tham quan thực tế và trao đổi với nhân viên tư vấn về vị trí, loại hình mộ hoặc nơi lưu giữ tro cốt.</p><span class="links"><a class="link" href="khu-mo.html">Các khu mộ <svg aria-hidden="true" width="16" height="16"><use href="#i-arrow"/></svg></a><a class="link" href="luu-tro-cot.html">Lưu tro cốt <svg aria-hidden="true" width="16" height="16"><use href="#i-arrow"/></svg></a></span></div></li>
+      <li><span class="n">5</span><div><b>Dành thời gian bên gia đình</b><p>Gia đình có thể dành thời gian ở bên nhau, tưởng nhớ người đã khuất và nói lời tiễn biệt trong sự trang nghiêm.</p></div></li>
+    </ol>
+  </div>
+  <aside class="side">
+    <div class="papers">
+      <h3>Các thủ tục cần lưu ý</h3>
+      <ol>
+        <li>Khai báo tử vong</li>
+        <li>Đăng ký khai tử và nhận Trích lục khai tử</li>
+        <li>Lo liệu tang lễ cùng đơn vị dịch vụ tang lễ</li>
+      </ol>
+      <a class="btn btn-xanh" href="lien-he.html">Các bước tiếp theo <svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+    </div>
+    <a class="callcard" href="tel:0818555444"><small>Tổng đài 24/7</small><b>0818 555 444</b><span>Nhân viên hướng dẫn ngay những việc cần làm trước</span></a>
+  </aside>
+</div></section>
+
+<section class="sec alt"><div class="wrap loved">
+  <figure><img srcset="assets/img/r/tp-path-640.jpg 640w, assets/img/r/tp-path-1080.jpg 1080w, assets/img/tp-path.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/tp-path.jpg" alt="Lối đi yên tĩnh dẫn vào Chùa Thiên Phước"></figure>
+  <div>
+    <h2 class="title">Đồng hành trong thời điểm cần thiết</h2>
+    <p class="body">Chúng ta khó tránh khỏi những giây phút đau buồn khi người thân yêu ra đi. Trong khoảng thời gian nhạy cảm này, có những việc hệ trọng cần được lưu tâm. Thủ tục pháp lý và khai báo có thể trở thành gánh nặng trong lúc như thế, nhưng lại là điều không thể bỏ qua.</p>
+    <p class="body muted">Nếu biết rõ những việc cần làm, mọi thứ có thể được giải quyết nhanh chóng, để quá trình tiếc thương sớm bắt đầu. Chúng tôi không thể nhấn mạnh đủ tầm quan trọng của việc chuẩn bị trước, bởi một đơn vị dịch vụ tang lễ uy tín có thể hỗ trợ những việc này một cách nhẹ nhàng, để tang quyến tập trung vào điều quan trọng hơn – đối diện với nỗi đau và tưởng nhớ người đã khuất.</p>
+    <div class="prompt">
+      <p>Gia đình đã cân nhắc việc chủ động chuẩn bị từ sớm chưa?</p>
+      <a class="btn btn-gach" href="chuan-bi-tu-som.html">Chuẩn bị từ sớm <svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <h2 class="title">Thông tin hữu ích</h2>
+  <div class="paths three">
+    <a href="tang-le.html"><img srcset="assets/img/r/dich-vu-tang-le-2-640.jpg 640w, assets/img/r/dich-vu-tang-le-2-1080.jpg 1080w, assets/img/dich-vu-tang-le-2.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/dich-vu-tang-le-2.jpg" alt=""><span><b>So sánh dịch vụ tang lễ</b>Quy trình 4 bước, hạng mục trọn gói</span><svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+    <a href="khu-mo.html"><img srcset="assets/img/r/khu-long-phung-640.jpg 640w, assets/img/r/khu-long-phung-1080.jpg 1080w, assets/img/khu-long-phung.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/khu-long-phung.jpg" alt=""><span><b>Các khu mộ tại Hoa Viên</b>Năm khu, diện tích và vị trí</span><svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+    <a href="luu-tro-cot.html"><img srcset="assets/img/r/columbarium-symmetric-640.jpg 640w, assets/img/r/columbarium-symmetric-1080.jpg 1080w, assets/img/columbarium-symmetric.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/columbarium-symmetric.jpg" alt=""><span><b>Dịch vụ lưu tro cốt</b>Hộc lưu cốt tại Chùa Thiên Phước</span><svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+  </div>
+</div></section>
+
+<section class="endcall"><div class="wrap">
+  <p>Dù là giữa đêm hay ngày lễ, gia đình chỉ cần gọi một số.</p>
+  <a href="tel:0818555444"><svg aria-hidden="true" width="28" height="28"><use href="#i-phone"/></svg>0818 555 444</a>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <div class="flogo"><img loading="lazy" decoding="async" src="assets/img/cpha-logo.png" alt=""><b>Hoa Viên<br>Bình Dương</b></div>
+      <p>Hoa Viên Nghĩa Trang Bình Dương, Khu phố Bông Trang, phường Chánh Phú Hòa, TP. Hồ Chí Minh.</p>
+      <p>Tổng đài 24/7<br><a class="ftel" href="tel:0818555444">0818 555 444</a></p>
+      <p>Giờ làm việc: 7h30 – 17h00, tất cả các ngày trong tuần (kể cả Chủ nhật và ngày lễ).</p>
+      <p><a href="https://cphaco.vn">cphaco.vn</a> · <a href="https://maps.app.goo.gl/UGsyaCrNZpi6F3yY6">Xem bản đồ</a></p>
+    </div>
+    <div><h2 class="fh">Hỗ trợ</h2><ul><li><a href="khi-co-nguoi-than-qua-doi.html">Cần hỗ trợ ngay</a></li><li><a href="chuan-bi-tu-som.html">Chuẩn bị từ sớm</a></li></ul>
+      <h2 class="fh" style="margin-top:26px">Lựa chọn dịch vụ</h2><ul><li><a href="tang-le.html">Dịch vụ tang lễ</a></li><li><a href="khu-mo.html">Khu mộ & vị trí an nghỉ</a></li><li><a href="luu-tro-cot.html">Dịch vụ lưu tro cốt</a></li><li><a href="dich-vu-khac.html">Dịch vụ khác</a></li></ul></div>
+    <div><h2 class="fh">Thông tin</h2><ul><li><a href="ve-chung-toi.html">Về chúng tôi</a></li><li><a href="tham-quan-360.html">Tham quan 360°</a></li><li><a href="chi-nhanh.html">Chi nhánh</a></li><li><a href="lien-he.html">Liên hệ</a></li><li><a href="su-kien.html">Sự kiện</a></li><li><a href="bai-viet.html">Bài viết</a></li><li><a href="hoi-dap.html">Hỏi & đáp</a></li><li><a href="chinh-sach-quyen-rieng-tu.html">Chính sách quyền riêng tư</a></li></ul></div>
+    <div><h2 class="fh">Đăng ký tham quan</h2><p>Có xe đưa đón miễn phí từ TP. HCM.</p><p style="margin-top:16px"><a class="btn btn-gach" href="trang-chu.html#dat-lich" style="color:#fff;text-decoration:none">Đặt lịch</a></p></div>
+  </div>
+  <div class="wrap branches">
+    <div><b>Chi nhánh 1 TP. HCM</b>Số 99 Điện Biên Phủ, P. Gia Định<br><a href="tel:02835127898">(028) 35.127.898</a> · <a href="tel:0778454544">0778.454.544</a></div>
+    <div><b>Chi nhánh 2 TP. HCM</b>Số 140C Nguyễn Cư Trinh, P. Cầu Ông Lãnh<br><a href="tel:02838382389">(028) 3 838 2389</a></div>
+    <div><b>Chi nhánh 3 TP. HCM</b>Số 253D Lương Định Của, P. Bình Trưng<br><a href="tel:0947542279">0947.542.279</a></div>
+  </div>
+  <div class="wrap copy"><span>© 2026 Công ty CP Đầu tư Xây dựng Chánh Phú Hòa. Bảo lưu mọi quyền.</span><span>Bản demo giao diện</span></div>
+</footer>
+<div class="callbar"><a href="tel:0818555444"><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="18" height="18"><use href="#i-phone"/></svg>0818 555 444</a><a href="trang-chu.html#dat-lich">Đặt lịch</a></div>
+
+<script src="assets/vendor/gsap.min.js"></script><script src="assets/vendor/ScrollTrigger.min.js"></script><script src="assets/vendor/SplitText.min.js"></script><script src="assets/site.js?v=585657b9"></script>
+</body>
+</html>

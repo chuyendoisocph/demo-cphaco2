@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dịch vụ tang lễ – Hoa Viên Bình Dương</title>
+<meta name="description" content="Dịch vụ tang lễ trọn gói của Hoa Viên Bình Dương: khâm liệm, nhập quan, lễ viếng, di quan. Tổng đài tiếp nhận 24/7: 0818 555 444.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=585657b9">
+<script>document.documentElement.classList.add('ga');setTimeout(function(){document.documentElement.classList.remove('ga')},2500)</script>
+<style>
+.phero>img{object-position:50% 88%}
+/* dải hỗ trợ gấp ngay dưới đầu trang */
+.urgent-bar{background:var(--gach);color:#fff}
+.urgent-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+.urgent-bar p{color:#f6dcd1;flex:1;min-width:280px}
+.urgent-bar p b{color:#fff}
+.urgent-bar .wrap>div{display:flex;align-items:center;gap:22px;flex:none}
+.urgent-bar .btn-trang{color:var(--gach-dam);font-size:17px;letter-spacing:.02em}
+.urgent-bar .link{color:#fff}
+
+/* giới thiệu */
+.fintro{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+.fintro p.body{margin-top:22px}
+.fintro .player{margin-top:0}
+/* không gian nghi lễ */
+.gal{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:250px 250px;gap:14px}
+.gal figure{margin:0;position:relative;overflow:hidden}
+.gal figure:first-child{grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;color:#fff;font-weight:600;font-size:15.5px;background:linear-gradient(0deg,rgba(5,16,28,.75),rgba(5,16,28,0))}
+
+/* vật dụng */
+.supply{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:center}
+.supply figure{margin:0;aspect-ratio:4/5;overflow:hidden}
+.supply figure img{width:100%;height:100%;object-fit:cover}
+.supply p.body{margin-top:22px;color:var(--phu)}
+.supply .inc{grid-template-columns:1fr;margin-top:22px}
+.supply .btn{margin-top:26px}
+
+/* 6 lý do */
+.reasons{background:var(--xanh-sau);color:#fff;padding:96px 0}
+.reasons .title{color:#fff;max-width:20em}
+.reasons ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border-top:1px solid rgba(255,255,255,.16)}
+.reasons li{padding:30px 30px 34px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.reasons li:not(:nth-child(3n+1)){padding-left:30px;border-left:1px solid rgba(255,255,255,.16)}
+.reasons span{font-size:28px;font-weight:700;color:#e39a7d;letter-spacing:-.02em}
+.reasons b{display:block;font-size:18px;line-height:1.4;margin-top:12px}
+.reasons p{font-size:15.5px;color:#b7c7d8;margin-top:8px;line-height:1.6}
+
+/* hai hướng sau tang lễ */
+.plans{padding:72px 0;background:#fff;border-bottom:1px solid var(--ke)}
+.plans .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
+.plans h2{font-size:clamp(24px,2.4vw,30px);line-height:1.25;color:var(--xanh-sau)}
+.plans p{color:var(--phu);margin-top:14px}
+.plans p b{color:var(--chu)}
+/* cẩm nang */
+.guide-g{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.guide-g p.body{margin-top:18px;color:var(--phu)}
+.guide-g p.body:first-of-type{margin-top:22px;color:var(--chu)}
+.consider.one{display:block;margin-top:14px}
+
+@media (max-width:1080px){
+  .fintro,.supply,.guide-g,.plans .wrap{grid-template-columns:1fr;gap:40px}
+  .supply figure{aspect-ratio:16/9}
+  .reasons ol{grid-template-columns:1fr 1fr}
+  .reasons li:nth-child(n){padding:28px 28px 30px 0;border-left:0}
+  .reasons li:nth-child(even){padding-left:28px;border-left:1px solid rgba(255,255,255,.16)}
+}
+@media (max-width:760px){
+  .urgent-bar .wrap>div{flex:1 1 100%;flex-wrap:wrap;gap:14px 20px}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal figure:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10}
+  .gal figure{aspect-ratio:4/3}
+  .gal figcaption{font-size:14px;padding:30px 12px 10px}
+  .reasons{padding:64px 0}
+  .reasons ol{grid-template-columns:1fr}
+  .reasons li:nth-child(n){padding:24px 0;border-left:0}
+  .plans{padding:56px 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#noi-dung">Bỏ qua, đến nội dung chính</a>
+<svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M16 3v4M8 3v4M3 11h18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v6c0 4.4 3.4 7.6 8 8 4.6-.4 8-3.6 8-8V7Z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g></symbol>
+  <symbol id="i-quote" viewBox="0 0 48 36"><path fill="currentColor" d="M0 36V22C0 9.5 6.5 2.2 19.5 0l1.8 4.6C14 6.6 10.4 10.7 10 17h9v19Zm27 0V22C27 9.5 33.5 2.2 46.5 0l1.5 4.6C41 6.6 37.4 10.7 37 17h9v19Z"/></symbol>
+</svg>
+
+<div class="top"><div class="wrap">
+  <span class="addr">Khu phố Bông Trang, phường Chánh Phú Hòa, TP. Hồ Chí Minh · 7h30 – 17h00 tất cả các ngày</span>
+  <span><a class="tre" href="https://cphaco.vn/duong-thien-thai-noi-tre-que-nha-hoi-tu/">Tặng Tre Giữ Nghề</a><span class="tre"> · </span>Tổng đài 24/7: <a href="tel:0818555444"><b>0818 555 444</b></a></span>
+</div></div>
+
+<div class="brandbar"><div class="wrap">
+  <a class="logo" href="trang-chu.html"><img src="assets/img/cpha-logo.png" alt="Logo Công ty CP Đầu tư Xây dựng Chánh Phú Hòa"><span><b>Hoa Viên Bình Dương</b><span>Công ty CP Đầu tư Xây dựng Chánh Phú Hòa</span></span></a>
+  <div class="hot">
+    <a href="tel:0818555444"><i><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="20" height="20"><use href="#i-phone"/></svg></i><span><small>Tổng đài hỗ trợ 24/7</small><b>0818 555 444</b></span></a>
+    <a class="t2" href="#dat-lich"><i><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="20" height="20"><use href="#i-cal"/></svg></i><span><small>Xe đưa đón miễn phí</small><b>Đặt lịch tham quan</b></span></a>
+  </div>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Danh mục</button>
+</div></div>
+
+<nav class="main" id="nav" aria-label="Menu chính"><div class="wrap"><ul>
+  <li><a href="trang-chu.html">Trang chủ</a></li>
+  <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+  <li><a href="khi-co-nguoi-than-qua-doi.html">Hỗ trợ <svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="14" height="14"><use href="#i-down"/></svg></a>
+    <ul class="sub"><li><a class="hot-link" href="khi-co-nguoi-than-qua-doi.html">Cần hỗ trợ ngay</a></li><li><a href="chuan-bi-tu-som.html">Chuẩn bị từ sớm</a></li></ul></li>
+  <li class="on"><a href="khu-mo.html">Dịch vụ <svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="14" height="14"><use href="#i-down"/></svg></a>
+    <ul class="sub"><li><a href="tang-le.html">Dịch vụ tang lễ</a></li><li><a href="khu-mo.html">Khu mộ & vị trí an nghỉ</a></li><li><a href="luu-tro-cot.html">Dịch vụ lưu tro cốt</a></li><li><a href="dich-vu-khac.html">Dịch vụ khác</a></li></ul></li>
+  <li><a href="tham-quan-360.html">Tham quan 360°</a></li>
+  <li><a href="su-kien.html">Sự kiện</a></li>
+  <li><a href="bai-viet.html">Bài viết</a></li>
+  <li><a href="chi-nhanh.html">Chi nhánh</a></li>
+  <li><a href="hoi-dap.html">Hỏi & đáp</a></li>
+  <li><a href="lien-he.html">Liên hệ</a></li>
+</ul></div></nav>
+
+<main id="noi-dung" tabindex="-1">
+<section class="phero">
+  <img fetchpriority="high" src="assets/img/dich-vu-tang-le-3.jpg" alt="Đoàn nghi lễ di quan trên đại lộ trong Hoa Viên">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Đường dẫn"><a href="trang-chu.html">Trang chủ</a><span>/</span><a href="khu-mo.html">Dịch vụ</a><span>/</span>Dịch vụ tang lễ</nav>
+    <h1>Dịch vụ tang lễ</h1>
+    <p>Tận tâm trong từng nghi thức</p>
+  </div>
+</section>
+
+<div class="urgent-bar"><div class="wrap">
+  <p><b>Gia đình vừa có người thân qua đời?</b> Tổng đài tiếp nhận 24/7, hướng dẫn ngay những việc cần làm trước.</p>
+  <div><a class="btn btn-trang" href="tel:0818555444"><svg aria-hidden="true" width="18" height="18"><use href="#i-phone"/></svg>0818 555 444</a><a class="link" href="khi-co-nguoi-than-qua-doi.html">Các bước cần làm <svg aria-hidden="true" width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+</div></div>
+
+<section class="sec"><div class="wrap fintro">
+  <div>
+    <h2 class="title">Gói dịch vụ trọn gói</h2>
+    <p class="body">Lo liệu tang lễ là việc hệ trọng và nhạy cảm. Dù là chuẩn bị trước hay khi hữu sự, việc biết bắt đầu từ đâu và quyết định những gì cần làm có thể khiến nhiều người bối rối, nhất là với những ai chưa từng trực tiếp sắp xếp các nghi thức cần thiết. Với bề dày kinh nghiệm trong lĩnh vực dịch vụ tang lễ, Hoa Viên Bình Dương thấu hiểu sâu sắc nỗi trăn trở này.</p>
+    <details class="more"><summary>Đọc thêm <svg aria-hidden="true" width="16" height="16"><use href="#i-down"/></svg></summary>
+      <p>Gia đình được hướng dẫn lựa chọn các hạng mục cần thiết theo tín ngưỡng, phong tục, quy mô lễ tang và ngân sách dự kiến. Mỗi phương án được trao đổi rõ ràng trước khi thực hiện để hạn chế những quyết định vội vàng trong lúc tang gia bối rối.</p>
+      <p>Đội ngũ phụ trách phối hợp xuyên suốt từ tiếp nhận, khâm liệm, nhập quan, chuẩn bị lễ viếng đến di quan, an táng hoặc hỏa táng, giúp gia đình có thêm thời gian ở bên nhau và tưởng nhớ người đã khuất.</p>
+    </details>
+    <h3 class="inc-h">Gói dịch vụ gồm</h3>
+    <ul class="inc">
+      <li>Tư vấn nghi thức & phương án tổ chức</li>
+      <li>Khâm liệm & nhập quan</li>
+      <li>Chuẩn bị lễ viếng & bàn thờ</li>
+      <li>Tang phục & nhạc lễ</li>
+      <li>Xe tang & điều phối di quan</li>
+      <li>Rạp, bàn ghế & dịch vụ hỗ trợ</li>
+    </ul>
+  </div>
+  <div class="player" id="player">
+    <img srcset="assets/img/r/dich-vu-tang-le-1-640.jpg 640w, assets/img/r/dich-vu-tang-le-1-1080.jpg 1080w, assets/img/dich-vu-tang-le-1.jpg 1920w" sizes="auto, 100vw" loading="lazy" decoding="async" src="assets/img/dich-vu-tang-le-1.jpg" alt="Đội ngũ điều phối nghi thức di quan">
+    <button type="button" aria-label="Phát video giới thiệu dịch vụ tang lễ"><i><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7Z"/></svg></i></button>
+  </div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head"><div><h2 class="title">Quy trình thực hiện</h2><p class="lead">Đội ngũ Hoa Viên phối hợp cùng gia đình chuẩn bị bốn nghi thức chính một cách trang nghiêm, phù hợp với phong tục, tín ngưỡng và nguyện vọng đã thống nhất.</p></div></div>
+  <ol class="steps">
+    <li><span class="n">1</span><b>Khâm liệm</b><p>Chuẩn bị chu đáo cho người đã khuất và các vật dụng cần thiết theo nội dung gia đình đã thống nhất.</p></li>
+    <li><span class="n">2</span><b>Nhập quan</b><p>Thực hiện nghi thức nhập quan trang nghiêm, tôn trọng phong tục, tôn giáo và nguyện vọng của gia đình.</p></li>
+    <li><span class="n">3</span><b>Lễ viếng</b><p>Chuẩn bị bàn thờ, không gian lễ viếng, tang phục và nhạc lễ để gia đình, thân hữu cùng tưởng niệm.</p></li>
+    <li><span class="n">4</span><b>Di quan</b><p>Điều phối xe tang và đoàn đưa tiễn đến nơi an táng hoặc hỏa táng theo phương án gia đình đã lựa chọn.</p></li>
+  </ol>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><div><h2 class="title">Không gian nghi lễ & tưởng niệm</h2><p class="lead">Hoa Viên Bình Dương tổ chức và hỗ trợ các nghi lễ tưởng niệm trong không gian trang nghiêm, hài hòa với cảnh quan xanh. Từng khu vực được chuẩn bị chỉn chu để gia đình, thân hữu cùng tiễn biệt người đã khuất theo tín ngưỡng và nguyện vọng đã thống nhất.</p></div></div>
+  <div class="gal">
+    <figure><img srcset="assets/img/r/cau-sieu-640.jpg 640w, assets/img/r/cau-sieu-1080.jpg 1080w, assets/img/cau-sieu.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/cau-sieu.jpg" alt="Không gian lễ cầu siêu cầu an tại Linh Hoa Tuệ Đàn"><figcaption>Không gian cầu siêu – cầu an</figcaption></figure>
+    <figure><img srcset="assets/img/r/dai-le-vu-lan-640.jpg 640w, assets/img/r/dai-le-vu-lan-1080.jpg 1080w, assets/img/dai-le-vu-lan.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/dai-le-vu-lan.jpg" alt="Nghi lễ tưởng niệm mùa Vu Lan"><figcaption>Nghi lễ tưởng niệm trang nghiêm</figcaption></figure>
+    <figure><img srcset="assets/img/r/tp-ceremony-640.jpg 640w, assets/img/r/tp-ceremony-1080.jpg 1080w, assets/img/tp-ceremony.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/tp-ceremony.jpg" alt="Chư tăng cử hành nghi lễ trước Chùa Thiên Phước"><figcaption>Nghi lễ tại Chùa Thiên Phước</figcaption></figure>
+  </div>
+  <p class="tbl-note">Không gian và hình thức nghi lễ được tư vấn theo nhu cầu thực tế của từng gia đình.</p>
+</div></section>
+
+<section class="sec alt"><div class="wrap supply">
+  <figure><img srcset="assets/img/r/dich-vu-tang-le-2-640.jpg 640w, assets/img/r/dich-vu-tang-le-2-1080.jpg 1080w, assets/img/dich-vu-tang-le-2.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/dich-vu-tang-le-2.jpg" alt="Đội ngũ Hoa Viên Bình Dương phối hợp thực hiện nghi thức di quan"></figure>
+  <div>
+    <h2 class="title">Vật dụng tang lễ</h2>
+    <p class="body">Hoa Viên Bình Dương không vận hành danh mục quan tài hoặc bình tro cốt cố định. Khi gia đình có nhu cầu, đội ngũ sẽ tư vấn tiêu chí lựa chọn và phối hợp với đơn vị cung cấp phù hợp.</p>
+    <ul class="inc">
+      <li>Phù hợp với hình thức an táng hoặc hỏa táng</li>
+      <li>Tôn trọng tín ngưỡng và nghi thức của gia đình</li>
+      <li>Trao đổi rõ mẫu, chất liệu và chi phí dự kiến</li>
+      <li>Phối hợp giao nhận theo thời gian tổ chức</li>
+    </ul>
+    <p class="fine">Mẫu mã, chất liệu, kích thước, chi phí và khả năng cung ứng được xác nhận theo từng trường hợp trước khi gia đình quyết định.</p>
+    <a class="btn btn-gach" href="#dat-lich">Trao đổi nhu cầu <svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+  </div>
+</div></section>
+
+<section class="reasons"><div class="wrap">
+  <h2 class="title">6 lý do để gia đình an tâm lựa chọn Hoa Viên Bình Dương</h2>
+  <ol>
+    <li><span>01</span><b>Tiếp nhận và tư vấn kịp thời khi gia đình cần</b><p>Đầu mối hỗ trợ tiếp nhận thông tin, giải thích các bước cần thực hiện và giúp gia đình xác định những việc ưu tiên trong thời gian đầu.</p></li>
+    <li><span>02</span><b>Phối hợp trọn gói từ khâm liệm đến di quan</b><p>Các hạng mục được phối hợp theo một kế hoạch thống nhất, hạn chế việc gia đình phải tự liên hệ nhiều đơn vị trong lúc bối rối.</p></li>
+    <li><span>03</span><b>Nghi thức phù hợp phong tục, tôn giáo và nguyện vọng</b><p>Mỗi tang lễ được trao đổi kỹ về tín ngưỡng, tập quán gia đình và mong muốn của người đã khuất để tổ chức trang nghiêm, phù hợp.</p></li>
+    <li><span>04</span><b>Đội ngũ có kinh nghiệm, phục vụ tận tâm và chỉn chu</b><p>Nhân sự phụ trách từng công đoạn được phân công rõ ràng, giữ thái độ điềm tĩnh, tôn trọng và hỗ trợ gia đình xuyên suốt buổi lễ.</p></li>
+    <li><span>05</span><b>Không gian và phương tiện phục vụ trang nghiêm</b><p>Không gian tổ chức, phương tiện vận chuyển và các vật dụng nghi lễ được chuẩn bị đồng bộ theo phương án đã thống nhất.</p></li>
+    <li><span>06</span><b>Hạng mục được trao đổi rõ ràng trước khi thực hiện</b><p>Phạm vi công việc, lựa chọn sản phẩm và chi phí dự kiến được xác nhận rõ để gia đình chủ động cân nhắc và kiểm soát ngân sách.</p></li>
+  </ol>
+</div></section>
+
+<section class="plans"><div class="wrap">
+  <div>
+    <h2>Sau tang lễ, gia đình chọn hình thức nào?</h2>
+    <p>Hoa Viên Bình Dương tư vấn giải pháp phù hợp với nhu cầu, tín ngưỡng và điều kiện của từng gia đình. <b>Mọi hạng mục sẽ được trao đổi rõ ràng trước khi thực hiện.</b></p>
+  </div>
+  <div class="paths">
+    <a href="khu-mo.html"><img srcset="assets/img/r/khu-long-phung-640.jpg 640w, assets/img/r/khu-long-phung-1080.jpg 1080w, assets/img/khu-long-phung.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/khu-long-phung.jpg" alt=""><span><b>An táng</b>Chọn khu mộ & vị trí an nghỉ</span><svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+    <a href="luu-tro-cot.html"><img srcset="assets/img/r/tp-courtyard-640.jpg 640w, assets/img/r/tp-courtyard-1080.jpg 1080w, assets/img/tp-courtyard.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/tp-courtyard.jpg" alt=""><span><b>Hỏa táng & lưu giữ tro cốt</b>Hộc lưu cốt tại Chùa Thiên Phước</span><svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap guide-g">
+  <div>
+    <h2 class="title">Cẩm nang chọn đơn vị dịch vụ tang lễ</h2>
+    <p class="body">Lựa chọn đơn vị dịch vụ tang lễ phù hợp giúp gia đình được hướng dẫn rõ ràng và giảm bớt áp lực khi sắp xếp các nghi thức cần thiết. Một đơn vị uy tín cần cung cấp thông tin minh bạch, tôn trọng tín ngưỡng và thực hiện đúng những nội dung đã thống nhất.</p>
+    <p class="body">Gia đình nên dành thời gian tìm hiểu kinh nghiệm, phạm vi dịch vụ, cách phối hợp và phản hồi từ những người từng sử dụng. Không nên quyết định chỉ dựa trên mức giá khi chưa hiểu rõ những hạng mục đã bao gồm và các chi phí có thể phát sinh.</p>
+    <p class="body">Một đơn vị phù hợp cần biết lắng nghe, giải thích dễ hiểu và không gây áp lực lựa chọn. Cảm giác tin cậy, sự minh bạch và khả năng đáp ứng đúng nghi thức là những yếu tố quan trọng trong suốt quá trình tổ chức.</p>
+  </div>
+  <div>
+    <h3 class="inc-h" style="margin-top:0">5 điều cần cân nhắc khi chọn đơn vị dịch vụ tang lễ</h3>
+    <div class="consider one"><div>
+      <details open><summary><span>01</span>Tôn giáo và văn hóa</summary><p>Đơn vị có hiểu và thực hiện được các nghi thức phù hợp với tín ngưỡng, truyền thống của gia đình hay không?</p></details>
+      <details><summary><span>02</span>Dịch vụ và sản phẩm</summary><p>Phạm vi dịch vụ có đáp ứng đúng nhu cầu thực tế, có hạng mục bổ sung nào thật sự hữu ích cho gia đình hay không?</p></details>
+      <details><summary><span>03</span>Ngân sách và giá cả</summary><p>Bảng giá có minh bạch, phản ánh đúng chất lượng phục vụ và nêu rõ những khoản có thể phát sinh hay không?</p></details>
+      <details><summary><span>04</span>Cơ sở vật chất</summary><p>Không gian, phương tiện và trang thiết bị có phù hợp với quy mô cũng như hình thức tang lễ gia đình mong muốn hay không?</p></details>
+      <details><summary><span>05</span>Sự an tâm của gia đình</summary><p>Đội ngũ có thể hiện sự thấu cảm, tác phong đúng mực và tập trung giải quyết nhu cầu thay vì tạo áp lực mua thêm dịch vụ hay không?</p></details>
+    </div></div>
+  </div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head"><div><h2 class="title">Về dịch vụ tang lễ</h2></div><a class="link" href="bai-viet.html">Tất cả bài viết <svg aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></a></div>
+  <div class="reads">
+    <a href="bai-viet-can-lam-gi-khi-co-nguoi-than-qua-doi.html"><div class="ph"><img srcset="assets/img/r/tp-path-640.jpg 640w, assets/img/r/tp-path-1080.jpg 1080w, assets/img/tp-path.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/tp-path.jpg" alt=""></div><b>Đơn vị dịch vụ tang lễ là gì?</b><span>Đọc bài viết</span></a>
+    <a href="bai-viet-can-lam-gi-khi-co-nguoi-than-qua-doi.html"><div class="ph"><img srcset="assets/img/r/vu-lan-640.jpg 640w, assets/img/r/vu-lan-1080.jpg 1080w, assets/img/vu-lan.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/vu-lan.jpg" alt=""></div><b>Chuẩn bị một nghi lễ trang nghiêm</b><span>Đọc bài viết</span></a>
+    <a href="bai-viet-tham-vieng-va-cham-soc-mo-phan.html"><div class="ph"><img srcset="assets/img/r/grave-care-640.jpg 640w, assets/img/r/grave-care-1080.jpg 1080w, assets/img/grave-care.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/grave-care.jpg" alt=""></div><b>Thăm viếng và tưởng nhớ</b><span>Đọc bài viết</span></a>
+    <a href="bai-viet-an-tang-hay-hoa-tang.html"><div class="ph"><img srcset="assets/img/r/thien-phuoc-courtyard-640.jpg 640w, assets/img/r/thien-phuoc-courtyard-1080.jpg 1080w, assets/img/thien-phuoc-courtyard.jpg 1920w" sizes="auto, (max-width:760px) 100vw, 50vw" loading="lazy" decoding="async" src="assets/img/thien-phuoc-courtyard.jpg" alt=""></div><b>An táng hay hỏa táng</b><span>Đọc bài viết</span></a>
+  </div>
+</div></section>
+
+<section class="cta" id="dat-lich">
+  <img loading="lazy" decoding="async" src="assets/img/bus.jpg" alt="">
+  <div class="wrap">
+    <div>
+      <h2 class="title">Đặt lịch tham quan miễn phí</h2>
+      <p>Hệ thống xe đưa đón tận tình, mời quý khách tham quan và tìm hiểu hoa viên trước khi quyết định. Nhân viên gọi lại trong giờ làm việc để hẹn ngày và giờ đón.</p>
+      <a class="tel" href="tel:0818555444"><i><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="20" height="20"><use href="#i-phone"/></svg></i>0818 555 444</a>
+    </div>
+    <form data-demo>
+      <h3>Thông tin đặt lịch</h3>
+      <label>Họ và tên<input name="ten" autocomplete="name" required></label>
+      <label>Số điện thoại<input name="sdt" type="tel" autocomplete="tel" required></label>
+      <label class="full">Nhu cầu<select name="nhu-cau"><option>Tham quan, tìm hiểu khu mộ</option><option>Dịch vụ lưu tro cốt</option><option selected>Dịch vụ tang lễ</option><option>Sanh phần</option><option>Chăm sóc, xây dựng mộ</option></select></label>
+      <button class="btn btn-xanh full" type="submit">Gửi yêu cầu <svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="18" height="18"><use href="#i-arrow"/></svg></button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <div class="flogo"><img loading="lazy" decoding="async" src="assets/img/cpha-logo.png" alt=""><b>Hoa Viên<br>Bình Dương</b></div>
+      <p>Hoa Viên Nghĩa Trang Bình Dương, Khu phố Bông Trang, phường Chánh Phú Hòa, TP. Hồ Chí Minh.</p>
+      <p>Tổng đài 24/7<br><a class="ftel" href="tel:0818555444">0818 555 444</a></p>
+      <p>Giờ làm việc: 7h30 – 17h00, tất cả các ngày trong tuần (kể cả Chủ nhật và ngày lễ).</p>
+      <p><a href="https://cphaco.vn">cphaco.vn</a> · <a href="https://maps.app.goo.gl/UGsyaCrNZpi6F3yY6">Xem bản đồ</a></p>
+    </div>
+    <div><h2 class="fh">Hỗ trợ</h2><ul><li><a href="khi-co-nguoi-than-qua-doi.html">Cần hỗ trợ ngay</a></li><li><a href="chuan-bi-tu-som.html">Chuẩn bị từ sớm</a></li></ul>
+      <h2 class="fh" style="margin-top:26px">Lựa chọn dịch vụ</h2><ul><li><a href="tang-le.html">Dịch vụ tang lễ</a></li><li><a href="khu-mo.html">Khu mộ & vị trí an nghỉ</a></li><li><a href="luu-tro-cot.html">Dịch vụ lưu tro cốt</a></li><li><a href="dich-vu-khac.html">Dịch vụ khác</a></li></ul></div>
+    <div><h2 class="fh">Thông tin</h2><ul><li><a href="ve-chung-toi.html">Về chúng tôi</a></li><li><a href="tham-quan-360.html">Tham quan 360°</a></li><li><a href="chi-nhanh.html">Chi nhánh</a></li><li><a href="lien-he.html">Liên hệ</a></li><li><a href="su-kien.html">Sự kiện</a></li><li><a href="bai-viet.html">Bài viết</a></li><li><a href="hoi-dap.html">Hỏi & đáp</a></li><li><a href="chinh-sach-quyen-rieng-tu.html">Chính sách quyền riêng tư</a></li></ul></div>
+    <div><h2 class="fh">Đăng ký tham quan</h2><p>Có xe đưa đón miễn phí từ TP. HCM.</p><p style="margin-top:16px"><a class="btn btn-gach" href="#dat-lich" style="color:#fff;text-decoration:none">Đặt lịch</a></p></div>
+  </div>
+  <div class="wrap branches">
+    <div><b>Chi nhánh 1 TP. HCM</b>Số 99 Điện Biên Phủ, P. Gia Định<br><a href="tel:02835127898">(028) 35.127.898</a> · <a href="tel:0778454544">0778.454.544</a></div>
+    <div><b>Chi nhánh 2 TP. HCM</b>Số 140C Nguyễn Cư Trinh, P. Cầu Ông Lãnh<br><a href="tel:02838382389">(028) 3 838 2389</a></div>
+    <div><b>Chi nhánh 3 TP. HCM</b>Số 253D Lương Định Của, P. Bình Trưng<br><a href="tel:0947542279">0947.542.279</a></div>
+  </div>
+  <div class="wrap copy"><span>© 2026 Công ty CP Đầu tư Xây dựng Chánh Phú Hòa. Bảo lưu mọi quyền.</span><span>Bản demo giao diện</span></div>
+</footer>
+<div class="callbar"><a href="tel:0818555444"><svg aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" width="18" height="18"><use href="#i-phone"/></svg>0818 555 444</a><a href="#dat-lich">Đặt lịch</a></div>
+
+<script src="assets/vendor/gsap.min.js"></script><script src="assets/vendor/ScrollTrigger.min.js"></script><script src="assets/vendor/SplitText.min.js"></script><script src="assets/site.js?v=585657b9"></script>
+<script>
+document.querySelector('#player button').addEventListener('click',function(){
+  document.getElementById('player').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/msZmffahu1g?autoplay=1&rel=0" title="Video giới thiệu dịch vụ tang lễ" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+});
+</script>
+</body>
+</html>

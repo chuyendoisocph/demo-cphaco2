@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoa Viên Bình Dương – Nơi Cuộc Sống Vĩnh Hằng</title>
+<meta name="description" content="Hoa Viên Bình Dương – công viên tưởng niệm sinh thái 300 ha tại Chánh Phú Hòa. Khu mộ, lưu tro cốt, dịch vụ tang lễ trọn gói. Tổng đài 24/7: 0818 555 444.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--xanh:#17599E;--xanh-dam:#0F4277;--xanh-nhat:#E8F0F9;--gach:#A24A2B;--gach-dam:#873B20;--gach-nhat:#F6ECE6;--chu:#1E2328;--phu:#555D65;--ke:#E1E4E8;--nen:#F4F6F8;--font:"Be Vietnam Pro",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--chu);font-size:17px;line-height:1.65;background:#fff}
+::selection{background:#cfe0f3}
+:focus-visible{outline:3px solid #8fb6e0;outline-offset:2px}
+a{color:var(--xanh)}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;font:inherit;font-weight:600;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;border-radius:2px;transition:background .25s,color .25s}
+.btn-gach{background:var(--gach);color:#fff}.btn-gach:hover{background:var(--gach-dam)}
+.btn-xanh{background:var(--xanh);color:#fff}.btn-xanh:hover{background:var(--xanh-dam)}
+.btn-vien{border:1px solid var(--xanh);color:var(--xanh);background:#fff}.btn-vien:hover{background:var(--xanh);color:#fff}
+
+/* đầu trang */
+.top{background:var(--xanh-dam);color:#d5e2f0;font-size:14.5px}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:7px;padding-bottom:7px}
+.top a{color:#fff;text-decoration:none}
+.top a:hover{text-decoration:underline}
+.top b{color:#fff}
+.brandbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--chu)}
+.logo img{width:64px;height:64px}
+.logo b{display:block;font-size:21px;font-weight:700;color:var(--gach);text-transform:uppercase;letter-spacing:.01em;line-height:1.2}
+.logo span{font-size:14.5px;color:var(--xanh);font-weight:500}
+.hot{display:flex;gap:24px}
+.hot a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--chu)}
+.hot i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--gach-nhat);color:var(--gach)}
+.hot small{display:block;font-size:13px;color:var(--phu)}
+.hot b{font-size:19px;color:var(--gach)}
+.hot .t2 i{background:var(--xanh-nhat);color:var(--xanh)}
+.hot .t2 b{color:var(--xanh)}
+nav.main{background:var(--xanh);position:sticky;top:0;z-index:30}
+nav.main ul{display:flex;list-style:none}
+nav.main li{position:relative}
+nav.main>.wrap>ul>li>a{display:flex;align-items:center;gap:6px;padding:13px 16px;color:#fff;text-decoration:none;font-weight:500;font-size:15.5px}
+nav.main>.wrap>ul>li>a svg{opacity:.8}
+nav.main>.wrap>ul>li>a:hover,nav.main li.on>a{background:var(--xanh-dam)}
+nav.main .sub{display:none;position:absolute;top:100%;left:0;min-width:250px;background:#fff;border:1px solid var(--ke);border-top:3px solid var(--gach);box-shadow:0 10px 24px rgba(15,40,70,.12);list-style:none;flex-direction:column}
+nav.main li:hover>.sub,nav.main li:focus-within>.sub{display:flex}
+nav.main .sub a{display:block;padding:10px 16px;color:var(--chu);text-decoration:none;font-size:15px;border-bottom:1px solid #f0f2f4}
+nav.main .sub a:hover{background:var(--nen);color:var(--xanh)}
+nav.main .sub a.hot-link{color:var(--gach);font-weight:600}
+nav.main .right{margin-left:auto}
+.menu-btn{display:none}
+
+/* trình chiếu */
+.slider{position:relative;background:#111}
+.slides{position:relative;height:clamp(340px,44vw,540px);overflow:hidden}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s}
+.slides img.on{opacity:1}
+.slide-text{border-bottom:1px solid var(--ke);background:#fff}
+.slide-text .wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding-top:18px;padding-bottom:18px}
+.slide-text h1,.slide-text h2{font-size:24px;font-weight:700;color:var(--xanh-dam);line-height:1.25}
+.slide-text p{color:var(--phu);font-size:16px;margin-top:4px;max-width:62em}
+.slide-ctrl{display:flex;align-items:center;gap:14px}
+.dots{display:flex;gap:6px}
+.dots button{width:28px;height:5px;border:0;background:#cdd3d9;cursor:pointer;padding:0}
+.dots button.on{background:var(--gach)}
+.arrows{display:flex;gap:6px}
+.arrows button{width:36px;height:36px;border:1px solid var(--ke);background:#fff;color:var(--xanh);cursor:pointer;display:grid;place-items:center}
+.arrows button:hover{border-color:var(--xanh)}
+
+/* lối tắt */
+.quick{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border:1px solid var(--ke)}
+.quick a{display:flex;gap:14px;padding:20px;text-decoration:none;color:var(--chu);border-right:1px solid var(--ke);transition:background .25s}
+.quick a:last-child{border-right:0}
+.quick a:hover{background:var(--nen)}
+.quick svg{flex:none;color:var(--gach)}
+.quick b{display:block;font-size:17px;color:var(--xanh-dam)}
+.quick span{display:block;font-size:14.5px;color:var(--phu);line-height:1.45;margin-top:2px}
+.quick a.urgent{background:var(--gach);color:#fff}
+.quick a.urgent b,.quick a.urgent span,.quick a.urgent svg{color:#fff}
+.quick a.urgent:hover{background:var(--gach-dam)}
+
+/* khung phần */
+.sec{padding:64px 0}
+.alt{background:var(--nen)}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid var(--ke);position:relative}
+.head::after{content:"";position:absolute;left:0;bottom:-2px;width:90px;height:2px;background:var(--gach)}
+.head h2{font-size:26px;font-weight:700;color:var(--xanh-dam);line-height:1.25}
+.head a{font-size:15px;font-weight:500;white-space:nowrap;text-decoration:none}
+.head a:hover{text-decoration:underline}
+.lead{color:var(--phu);max-width:46em}
+
+/* văn hóa & tương lai */
+.intro{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:start}
+.intro p+p{margin-top:12px}
+.more{margin-top:12px}
+.more summary{cursor:pointer;color:var(--xanh);font-weight:600;font-size:15.5px;list-style:none}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:" +"}
+.more[open] summary::after{content:" −"}
+.more p{margin-top:10px;color:var(--phu)}
+.facts{display:grid;grid-template-columns:1fr 1fr;margin-top:24px;border-top:1px solid var(--ke);border-left:1px solid var(--ke)}
+.facts div{padding:12px 14px;border-right:1px solid var(--ke);border-bottom:1px solid var(--ke)}
+.facts small{display:block;font-size:13.5px;color:var(--phu)}
+.facts b{font-size:17px}
+.intro .pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.intro .pics img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.intro .pics img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.intro figcaption{font-size:14px;color:var(--phu);margin-top:8px}
+
+/* trân trọng từng cuộc đời */
+.caring{background:var(--xanh-dam);color:#fff}
+.caring .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:0;align-items:stretch;padding:0}
+.caring img{width:100%;height:100%;object-fit:cover;min-height:380px}
+.caring .txt{padding:52px 48px}
+.caring h2{font-size:28px;font-weight:700;line-height:1.25}
+.caring p{color:#d3e0ee;margin-top:14px}
+.caring .sign{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.caring .btn-trang{background:#fff;color:var(--xanh-dam)}.caring .btn-trang:hover{background:var(--xanh-nhat)}
+
+/* sản phẩm & dịch vụ */
+.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod{display:block;background:#fff;text-decoration:none;color:var(--chu);border:1px solid var(--ke);transition:border-color .25s,box-shadow .25s}
+.prod:hover{border-color:#c4ccd4;box-shadow:0 10px 24px -14px rgba(15,40,70,.35)}
+.prod img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.prod div{padding:14px 16px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.prod b{font-size:17px;color:var(--xanh-dam);line-height:1.35}
+.prod svg{flex:none;color:var(--gach);transition:transform .3s}
+.prod:hover svg{transform:translateX(3px)}
+
+/* chuẩn bị từ sớm */
+.preplan{display:grid;grid-template-columns:1fr 1.25fr;gap:44px;align-items:start}
+.benefits{list-style:none;border-top:1px solid var(--ke)}
+.benefits li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--ke)}
+.benefits i{width:44px;height:44px;border-radius:50%;background:var(--gach-nhat);color:var(--gach);display:grid;place-items:center}
+.benefits b{display:block;font-size:17px}
+.benefits span{font-size:15.5px;color:var(--phu)}
+.guides{display:grid;gap:12px;margin-top:18px}
+.guide{display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:center;text-decoration:none;color:var(--chu);background:#fff;border:1px solid var(--ke);padding:8px}
+.guide:hover{border-color:#c4ccd4}
+.guide img{width:132px;height:86px;object-fit:cover}
+.guide b{font-size:16.5px;line-height:1.4;display:block}
+.guide span{font-size:14px;color:var(--xanh)}
+
+/* video */
+.video{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:center}
+.player{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.player img{width:100%;height:100%;object-fit:cover}
+.player button{position:absolute;inset:0;border:0;background:rgba(0,0,0,.18);cursor:pointer;display:grid;place-items:center;transition:background .25s}
+.player button:hover{background:rgba(0,0,0,.32)}
+.player button span{width:76px;height:76px;border-radius:50%;background:var(--gach);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+
+/* trích dẫn */
+.quote{padding:56px 0;border-top:1px solid var(--ke);border-bottom:1px solid var(--ke)}
+.quote blockquote{max-width:880px;margin:0 auto;text-align:center;font-size:20px;line-height:1.7;color:#2c333a}
+.quote blockquote::before{content:"";display:block;width:56px;height:3px;background:var(--gach);margin:0 auto 20px}
+
+/* cảm nhận */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.voice{background:#fff;border:1px solid var(--ke);padding:22px}
+.voice svg{color:var(--gach)}
+.voice b{display:block;font-size:17.5px;color:var(--xanh-dam);margin:10px 0 8px}
+.voice p{font-size:15.5px;color:var(--phu)}
+
+/* sự kiện + bài viết */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.ev{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:13px 0;border-bottom:1px dashed var(--ke)}
+.ev .d{background:#fff;border:1px solid var(--ke);text-align:center;padding:8px 4px;line-height:1.25;align-self:start}
+.ev .d b{display:block;color:var(--gach);font-size:15px}
+.ev .d span{font-size:12.5px;color:var(--phu)}
+.ev a,.post a{font-weight:600;color:var(--chu);text-decoration:none;line-height:1.4}
+.ev a:hover,.post a:hover{color:var(--xanh)}
+.ev p{font-size:15px;color:var(--phu);margin-top:2px}
+.post{display:grid;grid-template-columns:128px 1fr;gap:14px;padding:13px 0;border-bottom:1px dashed var(--ke)}
+.post img{width:128px;height:84px;object-fit:cover}
+.post a{display:block}
+.post span{font-size:13.5px;color:var(--phu)}
+
+/* đặt lịch */
+.cta{background:var(--gach)}
+.cta .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;padding-top:46px;padding-bottom:46px;color:#fff}
+.cta h2{font-size:27px;line-height:1.3}
+.cta p{color:#f4dcd2;margin-top:8px}
+.cta .tel{display:inline-block;margin-top:16px;color:#fff;font-size:26px;font-weight:700;text-decoration:none}
+.cta form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cta input,.cta select{width:100%;padding:12px;border:0;font:inherit;font-size:16px;border-radius:2px;color:var(--chu)}
+.cta .full{grid-column:1/-1}
+.cta button{padding:13px;border:0;background:var(--xanh-dam);color:#fff;font:inherit;font-weight:600;font-size:16.5px;cursor:pointer;border-radius:2px}
+.cta button:hover{background:#0a3260}
+.ok{grid-column:1/-1;background:#fff;color:var(--chu);padding:14px;border-radius:2px}
+
+/* chân trang */
+footer{background:#16202B;color:#b9c4cf;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding:48px 20px 30px}
+footer h4{color:#fff;font-size:15.5px;margin-bottom:10px}
+footer ul{list-style:none}
+footer li{margin:5px 0}
+footer a{color:#e5ecf3;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer p+p{margin-top:8px}
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid #2a3643;padding-top:22px;padding-bottom:26px}
+.branches b{color:#fff;display:block;font-size:15px;margin-bottom:2px}
+footer .copy{border-top:1px solid #2a3643;padding-top:14px;padding-bottom:16px;font-size:13.5px;color:#8696a6;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.callbar{display:none}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.slides img{transition:none}}
+@media (max-width:1040px){
+  .hot .t2{display:none}
+  nav.main>.wrap>ul>li>a{padding:13px 12px;font-size:15px}
+  .quick{grid-template-columns:1fr 1fr}
+  .quick a:nth-child(2){border-right:0}
+  .quick a:nth-child(-n+2){border-bottom:1px solid var(--ke)}
+  .intro,.two,.cta .wrap,.preplan,.video{grid-template-columns:1fr}
+  .caring .wrap{grid-template-columns:1fr}
+  .caring img{min-height:0;aspect-ratio:16/9}
+  .prods,.voices{grid-template-columns:1fr 1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:420px){.logo>span>span{display:none}}
+@media (max-width:760px){
+  .hot,.top .addr,.top .tre{display:none}
+  .menu-btn{display:flex;align-items:center;gap:8px;white-space:nowrap;flex:none;background:none;border:1px solid var(--ke);padding:8px 12px;font:inherit;font-weight:600;color:var(--xanh)}
+  nav.main{display:none;position:static}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column}
+  nav.main .right{margin-left:0}
+  nav.main .sub{display:flex;position:static;border:0;box-shadow:none;background:transparent;padding-left:16px}
+  nav.main .sub a{color:#dbe7f4;border:0;padding:6px 16px}
+  nav.main .sub a.hot-link{color:#fff}
+  .logo img{width:50px;height:50px}
+  .logo b{font-size:15px}
+  .logo span{font-size:13px}
+  .slide-text .wrap{grid-template-columns:1fr;gap:12px}
+  .slide-text h1,.slide-text h2{font-size:21px}
+  .quick{grid-template-columns:1fr}
+  .quick a{border-right:0;border-bottom:1px solid var(--ke)}
+  .prods,.voices,.branches{grid-template-columns:1fr}
+  .caring .txt{padding:34px 20px}
+  .cta form{grid-template-columns:1fr}
+  .quote blockquote{font-size:18px}
+  footer .cols{grid-template-columns:1fr}
+  .sec{padding:48px 0}
+  .brandbar .wrap{gap:12px}
+  body{padding-bottom:54px}
+  .callbar{display:grid;grid-template-columns:1.3fr 1fr;position:fixed;inset:auto 0 0;z-index:40}
+  .callbar a{padding:15px 6px;text-align:center;color:#fff;font-weight:600;text-decoration:none;background:var(--gach)}
+  .callbar a+a{background:var(--xanh)}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M16 3v4M8 3v4M3 11h18"/></g></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="top"><div class="wrap">
+  <span class="addr">Khu phố Bông Trang, phường Chánh Phú Hòa, TP. Hồ Chí Minh · 7h30 – 17h00 tất cả các ngày</span>
+  <span><a class="tre" href="https://cphaco.vn/duong-thien-thai-noi-tre-que-nha-hoi-tu/">Tặng Tre Giữ Nghề</a><span class="tre"> · </span>Tổng đài 24/7: <a href="tel:0818555444"><b>0818 555 444</b></a></span>
+</div></div>
+
+<div class="brandbar"><div class="wrap">
+  <a class="logo" href="/"><img src="assets/img/cpha-logo.png" alt="Logo Công ty CP Đầu tư Xây dựng Chánh Phú Hòa"><span><b>Hoa Viên Bình Dương</b><span>Công ty CP Đầu tư Xây dựng Chánh Phú Hòa</span></span></a>
+  <div class="hot">
+    <a href="tel:0818555444"><i><svg width="20" height="20"><use href="#i-phone"/></svg></i><span><small>Tổng đài hỗ trợ 24/7</small><b>0818 555 444</b></span></a>
+    <a class="t2" href="#dat-lich"><i><svg width="20" height="20"><use href="#i-cal"/></svg></i><span><small>Xe đưa đón miễn phí</small><b>Đặt lịch tham quan</b></span></a>
+  </div>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Danh mục</button>
+</div></div>
+
+<nav class="main" id="nav"><div class="wrap"><ul>
+  <li class="on"><a href="/">Trang chủ</a></li>
+  <li><a href="/ve-chung-toi">Về chúng tôi</a></li>
+  <li><a href="/ho-tro/khi-co-nguoi-than-qua-doi">Hỗ trợ <svg width="14" height="14"><use href="#i-down"/></svg></a>
+    <ul class="sub"><li><a class="hot-link" href="/ho-tro/khi-co-nguoi-than-qua-doi">Cần hỗ trợ ngay</a></li><li><a href="/ho-tro/chuan-bi-tu-som">Chuẩn bị từ sớm</a></li></ul></li>
+  <li><a href="/dich-vu/phan-mo">Dịch vụ <svg width="14" height="14"><use href="#i-down"/></svg></a>
+    <ul class="sub"><li><a href="/dich-vu/tang-le">Dịch vụ tang lễ</a></li><li><a href="/dich-vu/phan-mo">Khu mộ & vị trí an nghỉ</a></li><li><a href="/dich-vu/luu-tro-cot">Dịch vụ lưu tro cốt</a></li><li><a href="/dich-vu/dich-vu-khac">Dịch vụ khác</a></li></ul></li>
+  <li><a href="/tham-quan-360">Tham quan 360°</a></li>
+  <li><a href="/su-kien">Sự kiện</a></li>
+  <li><a href="/bai-viet">Bài viết</a></li>
+  <li><a href="/chi-nhanh">Chi nhánh</a></li>
+  <li><a href="/hoi-dap">Hỏi & đáp</a></li>
+  <li><a href="/lien-he">Liên hệ</a></li>
+</ul></div></nav>
+
+<main>
+<section class="slider" aria-label="Giới thiệu nổi bật">
+  <div class="slides" id="slides">
+    <img class="on" src="assets/img/linh-hoa.jpg" alt="Linh Hoa Tuệ Đàn nhìn từ trên cao">
+    <img src="assets/img/roundabout-aerial.jpg" alt="Vòng xoay Vĩnh Hằng Đài giữa cảnh quan hoa viên">
+    <img src="assets/img/cau-sieu.jpg" alt="Lễ cầu siêu cầu an tại Linh Hoa Tuệ Đàn">
+    <img src="assets/img/funeral.jpg" alt="Đội ngũ tổ chức dịch vụ tang lễ">
+    <img src="assets/img/bus.jpg" alt="Xe đưa đón khách tham quan hoa viên">
+  </div>
+</section>
+<div class="slide-text"><div class="wrap">
+  <div id="slide-copy"></div>
+  <div class="slide-ctrl"><div class="dots" id="dots"></div><div class="arrows"><button type="button" id="prev" aria-label="Ảnh trước"><svg width="16" height="16" style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button><button type="button" id="next" aria-label="Ảnh sau"><svg width="16" height="16"><use href="#i-arrow"/></svg></button></div></div>
+</div></div>
+
+<div class="wrap">
+  <div class="quick">
+    <a class="urgent" href="/ho-tro/khi-co-nguoi-than-qua-doi"><svg width="32" height="32"><use href="#i-phone"/></svg><div><b>Cần hỗ trợ ngay</b><span>Khi có người thân qua đời, gọi 0818 555 444 để được hướng dẫn</span></div></a>
+    <a href="/ho-tro/chuan-bi-tu-som"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v6c0 4.4 3.4 7.6 8 8 4.6-.4 8-3.6 8-8V7Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Chuẩn bị từ sớm</b><span>Chủ động lựa chọn, để gia đình an tâm về sau</span></div></a>
+    <a href="#dat-lich"><svg width="32" height="32"><use href="#i-cal"/></svg><div><b>Tham quan miễn phí</b><span>Có xe đưa đón, tìm hiểu hoa viên trước khi quyết định</span></div></a>
+    <a href="/tham-quan-360"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><div><b>Tham quan 360°</b><span>Xem trước 15 điểm trong hoa viên ngay trên màn hình</span></div></a>
+  </div>
+</div>
+
+<section class="sec" id="ve-chung-toi"><div class="wrap intro">
+  <div>
+    <div class="head"><h2>Văn hóa & tương lai</h2><a href="/ve-chung-toi">Về chúng tôi</a></div>
+    <p>Một nền văn hóa đã trường tồn hàng ngàn năm tựa như dòng nước – góp nhặt từng chút một để rồi hình thành nên bề dày lịch sử. Hoa Viên Bình Dương thấu hiểu sâu sắc điều này, tự hào gìn giữ truyền thống và văn hóa hiếu nghĩa của dân tộc bằng việc mang đến hệ thống dịch vụ tang lễ toàn diện, để tôn vinh và trân trọng từng cuộc đời.</p>
+    <details class="more"><summary>Đọc thêm</summary>
+      <p>Chúng tôi nhìn cuộc sống bằng sự trân trọng và lắng nghe bằng cả tấm lòng. Mỗi nghi thức tưởng niệm không chỉ là lời tiễn biệt mà còn là cách gia đình gìn giữ ký ức, tình thân và những giá trị đã được trao truyền qua nhiều thế hệ.</p>
+      <p>Bằng việc kết hợp truyền thống với cách tổ chức phù hợp đời sống hiện đại, Hoa Viên Bình Dương hướng đến một không gian nơi mọi người đã khuất đều được tưởng nhớ trang nghiêm, không phân biệt tín ngưỡng hay hoàn cảnh.</p>
+    </details>
+    <div class="facts">
+      <div><small>Quy mô quy hoạch</small><b>300 ha</b></div>
+      <div><small>Quy hoạch và phát triển từ</small><b>Năm 2006</b></div>
+      <div><small>Tư vấn và hỗ trợ</small><b>24/7</b></div>
+      <div><small>Giờ làm việc</small><b>7h30 – 17h00 hằng ngày</b></div>
+    </div>
+  </div>
+  <figure>
+    <div class="pics">
+      <img src="assets/img/spirit-hill.jpg" alt="Đồi tâm linh và các khu mộ giữa rừng cây">
+      <img src="assets/img/thien-phuoc.jpg" alt="Chùa Thiên Phước">
+      <img src="assets/img/lotus.jpg" alt="Vĩnh Hằng Đài">
+    </div>
+    <figcaption>Đồi tâm linh, Chùa Thiên Phước và Vĩnh Hằng Đài trong khuôn viên hoa viên.</figcaption>
+  </figure>
+</div></section>
+
+<section class="caring"><div class="wrap">
+  <img src="assets/img/care-team.jpg" alt="Đội ngũ chăm sóc cảnh quan và khu mộ tại Hoa Viên Bình Dương">
+  <div class="txt">
+    <h2>Trân trọng từng cuộc đời</h2>
+    <p>Với hệ thống tiện ích đồng bộ cùng các sản phẩm và dịch vụ toàn diện, Hoa Viên Bình Dương mong muốn mang đến sự đồng hành ấm áp trong những thời khắc thiêng liêng.</p>
+    <p>“Trân trọng từng cuộc đời” là triết lý của chúng tôi – nơi mỗi cuộc đời đều ý nghĩa và đáng quý. Đội ngũ Hoa Viên luôn nỗ lực để người thân của mỗi gia đình được tôn vinh và tiễn biệt một cách trọn vẹn, bằng tất cả sự chuyên nghiệp và tận tâm.</p>
+    <div class="sign"><a class="btn btn-trang" href="/ve-chung-toi">Tìm hiểu thêm</a></div>
+  </div>
+</div></section>
+
+<section class="sec" id="dich-vu"><div class="wrap">
+  <div class="head"><h2>Sản phẩm & dịch vụ</h2><a href="/dich-vu/phan-mo">Xem tất cả</a></div>
+  <div class="prods">
+    <a class="prod" href="/dich-vu/phan-mo"><img src="assets/img/khu-gia-toc.jpg" alt="Khu mộ gia tộc"><div><b>Khu mộ & vị trí an nghỉ</b><svg width="20" height="20"><use href="#i-arrow"/></svg></div></a>
+    <a class="prod" href="/dich-vu/luu-tro-cot"><img src="assets/img/tp-courtyard.jpg" alt="Chùa Thiên Phước, nơi lưu tro cốt"><div><b>Dịch vụ lưu tro cốt</b><svg width="20" height="20"><use href="#i-arrow"/></svg></div></a>
+    <a class="prod" href="/dich-vu/tang-le"><img src="assets/img/funeral-2.jpg" alt="Nghi thức di quan"><div><b>Dịch vụ tang lễ</b><svg width="20" height="20"><use href="#i-arrow"/></svg></div></a>
+    <a class="prod" href="/dich-vu/dich-vu-khac"><img src="assets/img/grave-care.jpg" alt="Chăm sóc khu mộ"><div><b>Chăm sóc khu mộ</b><svg width="20" height="20"><use href="#i-arrow"/></svg></div></a>
+    <a class="prod" href="/dich-vu/dich-vu-khac"><img src="assets/img/pavilion.jpg" alt="Mộ gia tộc có nhà bia"><div><b>Tư vấn thiết kế & xây dựng mộ</b><svg width="20" height="20"><use href="#i-arrow"/></svg></div></a>
+    <a class="prod" href="/dich-vu/dich-vu-khac"><img src="assets/img/truc-lam.jpg" alt="Khu Trúc Lâm Bích Thủy"><div><b>Sanh phần</b><svg width="20" height="20"><use href="#i-arrow"/></svg></div></a>
+  </div>
+</div></section>
+
+<section class="sec alt" id="chuan-bi"><div class="wrap">
+  <div class="head"><h2>5 lợi ích khi chủ động chuẩn bị từ sớm</h2><a href="/ho-tro/chuan-bi-tu-som">Chuẩn bị từ sớm</a></div>
+  <div class="preplan">
+    <div>
+      <p class="lead">Nguyện vọng của gia đình là ưu tiên hàng đầu. Chủ động lựa chọn khi còn khỏe giúp chính mình quyết định, và để con cháu không phải bối rối khi việc đến.</p>
+      <div class="guides">
+        <a class="guide" href="/bai-viet/chuan-bi-hau-su-tu-som"><img src="assets/img/family-plot.jpg" alt=""><span><b>5 lợi ích khi chủ động chuẩn bị từ sớm</b><span>Đọc bài viết</span></span></a>
+        <a class="guide" href="/ho-tro/chuan-bi-tu-som"><img src="assets/img/song-than.jpg" alt=""><span><b>Khi nào nên bắt đầu chuẩn bị?</b><span>Xem hướng dẫn</span></span></a>
+        <a class="guide" href="/ho-tro/chuan-bi-tu-som"><img src="assets/img/long-phung.jpg" alt=""><span><b>Ai nên chủ động chuẩn bị từ sớm?</b><span>Xem hướng dẫn</span></span></a>
+      </div>
+    </div>
+    <div>
+      <ul class="benefits">
+        <li><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V12M12 12c0-4 3-7 7-7 0 4-3 7-7 7ZM12 14c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5Z"/></svg></i><div><b>Chăm sóc cảnh quan lâu dài</b><span>Đường sá, cây xanh, cảnh quan và các khu vực chung được đội ngũ Hoa Viên chăm sóc thường xuyên.</span></div></li>
+        <li><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18M5 20l5-9 3 5 2-3 4 7"/><circle cx="17" cy="6" r="2"/></svg></i><div><b>Phong thủy hữu tình</b><span>Hoa viên được các bậc thầy phong thủy uy tín đánh giá cao về thế đất và vượng khí.</span></div></li>
+        <li><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="1"/><path d="M3 10h18M7 15h4"/></svg></i><div><b>Phương án thanh toán linh hoạt</b><span>Quý khách được tư vấn phương án thanh toán theo chính sách áp dụng tại từng thời điểm.</span></div></li>
+        <li><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></i><div><b>Tiện ích toàn diện</b><span>Hệ thống hoa viên và trung tâm tích hợp với đầy đủ tiện ích cùng đội ngũ phục vụ chuyên nghiệp.</span></div></li>
+        <li><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h16M6 10V6l6-3 6 3v4M6 10v9M18 10v9M10 10v9M14 10v9M3 21h18"/></svg></i><div><b>Kiến trúc trang nghiêm</b><span>Mỗi khu trong hoa viên đều được thiết kế với kiến trúc thanh nhã, trang nghiêm, mang lại sự bình an và thư thái.</span></div></li>
+      </ul>
+      <p style="margin-top:20px"><a class="btn btn-gach" href="/lien-he">Liên hệ tư vấn</a></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="toan-canh"><div class="wrap video">
+  <div class="player" id="player">
+    <img src="assets/img/toan-canh-poster.jpg" alt="Toàn cảnh Hoa Viên Bình Dương từ trên cao">
+    <button type="button" aria-label="Phát video flycam toàn cảnh Hoa Viên Bình Dương"><span><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7Z"/></svg></span></button>
+  </div>
+  <div>
+    <div class="head"><h2>Toàn cảnh Hoa Viên Bình Dương</h2></div>
+    <p class="lead">Cùng ngắm không gian xanh và những công trình nổi bật của Hoa Viên Bình Dương qua video flycam từ trên cao.</p>
+    <div class="acts"><a class="btn btn-xanh" href="/tham-quan-360">Tham quan 360°</a><a class="btn btn-vien" href="#dat-lich">Đặt lịch tham quan</a></div>
+  </div>
+</div></section>
+
+<section class="quote"><div class="wrap">
+  <blockquote>Chúng ta vun đắp cho cuộc sống thêm ý nghĩa bằng những mục tiêu mới và lối sống lành mạnh. Ta cũng có thể chủ động lập kế hoạch cho chặng đường cuối cùng một cách an nhiên, tự mình gánh vác trọn vẹn trách nhiệm với cuộc đời và hạnh phúc của bản thân – bởi ai cũng xứng đáng được bình an trong tâm, hôm nay và mãi về sau.</blockquote>
+</div></section>
+
+<section class="sec alt" id="cam-nhan"><div class="wrap">
+  <div class="head"><h2>Cảm nhận của khách hàng</h2></div>
+  <p class="lead" style="margin-bottom:22px">Những chia sẻ chân thành từ khách hàng là nguồn động lực để chúng tôi tiếp tục hành trình của sự sẻ chia và tận tâm.</p>
+  <div class="voices">
+    <article class="voice"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a2 2 0 0 0-2 2v4h4v4H5M20 7h-4a2 2 0 0 0-2 2v4h4v4h-3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b>Dịch vụ tận tâm và chu đáo</b><p>Gia đình chúng tôi xin gửi lời cảm ơn chân thành đến đội ngũ Hoa Viên Bình Dương vì sự phục vụ tận tâm, chu đáo trong suốt tang lễ của cha chúng tôi. Mọi việc đều được lo liệu trọn vẹn…</p></article>
+    <article class="voice"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a2 2 0 0 0-2 2v4h4v4H5M20 7h-4a2 2 0 0 0-2 2v4h4v4h-3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b>Chuyên nghiệp trong từng chi tiết</b><p>Gia đình rất trân trọng sự chuyên nghiệp và chu toàn của các anh chị nhân viên. Mất mát để lại nỗi đau khó nguôi ngoai, nhưng tình người và sự sẻ chia đã giúp chúng tôi vững vàng hơn rất nhiều…</p></article>
+    <article class="voice"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M10 7H6a2 2 0 0 0-2 2v4h4v4H5M20 7h-4a2 2 0 0 0-2 2v4h4v4h-3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b>Cảnh quan đẹp và quy hoạch bài bản</b><p>Chúng tôi đặc biệt ấn tượng với cảnh quan xanh mát, không gian trang nghiêm và sự sắp xếp bài bản của hoa viên. Xin cảm ơn đội ngũ đã đồng hành cùng gia đình trong thời khắc khó khăn nhất…</p></article>
+  </div>
+</div></section>
+
+<section class="sec" id="tin-tuc"><div class="wrap two">
+  <div>
+    <div class="head"><h2>Sự kiện</h2><a href="/su-kien">Tất cả sự kiện</a></div>
+    <div class="ev"><div class="d"><b>Tháng Ba</b><span>âm lịch</span></div><div><a href="/su-kien/le-cau-sieu-cau-an-tiet-thanh-minh">Lễ Cầu Siêu – Cầu An tiết Thanh Minh</a><p>Gia đình cùng tưởng nhớ tổ tiên, cầu nguyện bình an và chăm sóc mộ.</p></div></div>
+    <div class="ev"><div class="d"><b>10/3</b><span>âm lịch</span></div><div><a href="/su-kien/gio-to-hung-vuong">Giỗ Tổ Hùng Vương</a><p>Hướng về cội nguồn, nhắc nhớ truyền thống uống nước nhớ nguồn.</p></div></div>
+    <div class="ev"><div class="d"><b>15/7</b><span>âm lịch</span></div><div><a href="/su-kien/dai-le-vu-lan-bao-hieu">Đại Lễ Vu Lan Báo Hiếu</a><p>Bày tỏ lòng biết ơn cha mẹ, tưởng nhớ ông bà tổ tiên.</p></div></div>
+    <div class="ev"><div class="d"><b>Tháng Chạp</b><span>hằng năm</span></div><div><a href="/su-kien/tao-mo-cuoi-nam">Tảo mộ cuối năm</a><p>Chăm sóc nơi an nghỉ của người thân trước thềm năm mới.</p></div></div>
+  </div>
+  <div>
+    <div class="head"><h2>Bài viết mới</h2><a href="/bai-viet">Tất cả bài viết</a></div>
+    <div class="post"><img src="assets/img/doi-phuong-hoang.jpg" alt=""><div><a href="/bai-viet/doi-phuong-hoang-chuyen-ve-mot-nguoi-biet-lo-truoc">Đồi Phượng Hoàng: Chuyện về một người biết lo trước</a><span>13/10/2026</span></div></div>
+    <div class="post"><img src="assets/img/care-team.jpg" alt=""><div><a href="/bai-viet/can-lam-gi-khi-co-nguoi-than-qua-doi">Hướng dẫn các bước cần thiết khi tổ chức tang lễ</a><span>17/09/2026</span></div></div>
+    <div class="post"><img src="assets/img/tp-courtyard.jpg" alt=""><div><a href="/bai-viet/an-tang-hay-hoa-tang">An táng hay hỏa táng: Gia đình nên cân nhắc điều gì?</a><span>17/09/2026</span></div></div>
+    <div class="post"><img src="assets/img/vu-lan.jpg" alt=""><div><a href="/bai-viet/thanh-minh-va-truyen-thong-tuong-nho-to-tien">Thanh Minh và truyền thống tưởng nhớ tổ tiên</a><span>17/09/2026</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="dat-lich"><div class="wrap">
+  <div>
+    <h2>Đặt lịch tham quan miễn phí</h2>
+    <p>Hệ thống xe đưa đón tận tình, mời quý khách tham quan và tìm hiểu hoa viên trước khi quyết định. Nhân viên gọi lại trong giờ làm việc để hẹn ngày và giờ đón.</p>
+    <a class="tel" href="tel:0818555444">0818 555 444</a>
+  </div>
+  <form data-demo>
+    <input name="ten" autocomplete="name" placeholder="Họ và tên" required aria-label="Họ và tên">
+    <input name="sdt" type="tel" autocomplete="tel" placeholder="Số điện thoại" required aria-label="Số điện thoại">
+    <select class="full" name="nhu-cau" aria-label="Nhu cầu"><option>Nhu cầu: tham quan, tìm hiểu khu mộ</option><option>Dịch vụ lưu tro cốt</option><option>Dịch vụ tang lễ</option><option>Sanh phần</option><option>Chăm sóc, xây dựng mộ</option></select>
+    <button class="full" type="submit">Gửi yêu cầu</button>
+  </form>
+</div></section>
+</main>
+
+<footer>
+  <div class="cols">
+    <div><h4>Văn phòng chính</h4><p>Hoa Viên Nghĩa Trang Bình Dương, Khu phố Bông Trang, phường Chánh Phú Hòa, TP. Hồ Chí Minh.</p><p>Tổng đài 24/7: <a href="tel:0818555444">0818 555 444</a><br>Giờ làm việc: 7h30 – 17h00, tất cả các ngày trong tuần (kể cả Chủ nhật và ngày lễ).</p><p><a href="https://cphaco.vn">cphaco.vn</a> · <a href="https://maps.app.goo.gl/UGsyaCrNZpi6F3yY6">Xem bản đồ</a></p></div>
+    <div><h4>Hỗ trợ</h4><ul><li><a href="/ho-tro/khi-co-nguoi-than-qua-doi">Cần hỗ trợ ngay</a></li><li><a href="/ho-tro/chuan-bi-tu-som">Chuẩn bị từ sớm</a></li></ul></div>
+    <div><h4>Lựa chọn dịch vụ</h4><ul><li><a href="/dich-vu/tang-le">Dịch vụ tang lễ</a></li><li><a href="/dich-vu/phan-mo">Khu mộ & vị trí an nghỉ</a></li><li><a href="/dich-vu/luu-tro-cot">Dịch vụ lưu tro cốt</a></li><li><a href="/dich-vu/dich-vu-khac">Dịch vụ khác</a></li></ul></div>
+    <div><h4>Thông tin</h4><ul><li><a href="/ve-chung-toi">Về chúng tôi</a></li><li><a href="/tham-quan-360">Tham quan 360°</a></li><li><a href="/chi-nhanh">Chi nhánh</a></li><li><a href="/lien-he">Liên hệ</a></li><li><a href="/su-kien">Sự kiện</a></li><li><a href="/bai-viet">Bài viết</a></li><li><a href="/hoi-dap">Hỏi & đáp</a></li><li><a href="/chinh-sach-quyen-rieng-tu">Chính sách quyền riêng tư</a></li></ul></div>
+  </div>
+  <div class="wrap branches">
+    <div><b>Chi nhánh 1 TP. HCM</b>Số 99 Điện Biên Phủ, P. Gia Định<br>(028) 35.127.898 · 0778.454.544</div>
+    <div><b>Chi nhánh 2 TP. HCM</b>Số 140C Nguyễn Cư Trinh, P. Cầu Ông Lãnh<br>(028) 3 838 2389</div>
+    <div><b>Chi nhánh 3 TP. HCM</b>Số 253D Lương Định Của, P. Bình Trưng<br>0947.542.279</div>
+  </div>
+  <div class="wrap copy"><span>© 2026 Công ty CP Đầu tư Xây dựng Chánh Phú Hòa. Bảo lưu mọi quyền.</span><span>Bản demo giao diện</span></div>
+</footer>
+<div class="callbar"><a href="tel:0818555444">Gọi 0818 555 444</a><a href="#dat-lich">Đặt lịch</a></div>
+
+<script>
+// Nội dung trình chiếu (CAROUSEL_SLIDES)
+var SLIDES=[
+  {t:'Hoa Viên Bình Dương',b:'Công viên tưởng niệm sinh thái hàng đầu, kiến tạo không gian an nghỉ trang nghiêm giữa thiên nhiên xanh mát.',cta:['Tìm hiểu thêm','/ve-chung-toi']},
+  {t:'Cảnh quan hữu tình',b:'Quy mô quy hoạch lên đến 300 ha, được kiến tạo hài hòa giữa cảnh quan thiên nhiên và các công trình tâm linh, mang lại sự an yên cho người đã khuất và gia đình.',cta:['Tìm hiểu thêm','/ve-chung-toi']},
+  {t:'Lễ Cầu Siêu – Cầu An',b:'Các nghi lễ tâm linh trang trọng được tổ chức thường niên, gửi gắm lòng thành kính và sự tri ân đến tổ tiên.',cta:['Liên hệ tư vấn','/lien-he']},
+  {t:'Dịch vụ tang lễ trọn gói',b:'Đội ngũ chuyên nghiệp đồng hành cùng gia đình trong từng bước, để tang quyến an tâm tiễn biệt người thân một cách trọn vẹn.',cta:['Tìm hiểu thêm','/dich-vu/tang-le']},
+  {t:'Tham quan miễn phí',b:'Hệ thống xe đưa đón tận tình, mời quý khách tham quan và tìm hiểu hoa viên trước khi quyết định.',cta:['Đặt lịch tham quan','#dat-lich']}
+];
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('#slides img')),copy=document.getElementById('slide-copy'),dots=document.getElementById('dots'),i=0,t;
+  function text(k){var s=SLIDES[k];copy.innerHTML=(k===0?'<h1>':'<h2>')+s.t+(k===0?'</h1>':'</h2>')+'<p>'+s.b+' <a href="'+s.cta[1]+'">'+s.cta[0]+' →</a></p>'}
+  imgs.forEach(function(im,k){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ảnh '+(k+1)+': '+SLIDES[k].t);if(!k)b.className='on';b.onclick=function(){show(k);auto()};dots.appendChild(b)});
+  function show(n){imgs[i].classList.remove('on');dots.children[i].classList.remove('on');i=(n+imgs.length)%imgs.length;imgs[i].classList.add('on');dots.children[i].classList.add('on');text(i)}
+  function auto(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(function(){show(i+1)},7000)}
+  document.getElementById('next').onclick=function(){show(i+1);auto()};
+  document.getElementById('prev').onclick=function(){show(i-1);auto()};
+  text(0);auto();
+})();
+// Video flycam: chỉ tải YouTube khi người xem bấm phát
+document.querySelector('#player button').addEventListener('click',function(){
+  document.getElementById('player').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/5eMkcNdEj6U?autoplay=1&rel=0" title="Video flycam toàn cảnh Hoa Viên Bình Dương" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+});
+document.querySelector('.menu-btn').addEventListener('click',function(){var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)});
+document.querySelectorAll('form[data-demo]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();f.innerHTML='<p class="ok">Đã ghi nhận yêu cầu. Nhân viên sẽ gọi lại trong giờ làm việc để hẹn ngày và giờ xe đón.</p>'})});
+</script>
+</body>
+</html>

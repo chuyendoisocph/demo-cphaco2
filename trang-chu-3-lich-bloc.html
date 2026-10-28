@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoa Viên Nghĩa Trang Bình Dương</title>
+<meta name="description" content="Hoa Viên Nghĩa Trang Bình Dương – lịch lễ âm dương, khu mộ, dịch vụ tang lễ. Tổng đài 0818 555 444, mở cửa 7h30–17h00 hằng ngày.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Big+Shoulders+Text:wght@500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tuong:#8CB0AA; --tuong-dam:#5E8580; --giay:#FFFFFF; --muc:#1A1A1A; --do:#CF1F27; --xanh:#1F4E9C; --xam:#5A5A5A; --ke:#D8D8D8;
+  --so:"Big Shoulders Display",Impact,sans-serif; --nhan:"Big Shoulders Text",Arial,sans-serif; --chu:"Literata",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--tuong);color:var(--muc);font-family:var(--chu);font-size:17.5px;line-height:1.6}
+/* vôi quét: vệt chổi ngang rất nhẹ */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.002 .03' numOctaves='3' seed='9'/%3E%3CfeColorMatrix values='0 0 0 0 .25 0 0 0 0 .38 0 0 0 0 .36 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23f)'/%3E%3C/svg%3E")}
+::selection{background:var(--do);color:#fff}
+:focus-visible{outline:3px solid var(--xanh);outline-offset:2px}
+a{color:var(--xanh)}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* bìa lịch = đầu trang */
+.bia{background:var(--giay);border-bottom:4px solid var(--do)}
+.bia .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding-top:14px;padding-bottom:14px}
+.bia .id{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--muc)}
+.bia .id img{width:56px;height:56px}
+.bia .id b{display:block;font-family:var(--nhan);font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase;color:var(--do);line-height:1.1}
+.bia .id span{font-family:var(--nhan);font-weight:500;font-size:15.5px;color:var(--xanh)}
+.bia nav ul{display:flex;justify-content:center;gap:2px;list-style:none;flex-wrap:wrap}
+.bia nav a{display:block;padding:8px 9px;font-family:var(--nhan);font-weight:700;font-size:17px;letter-spacing:.03em;text-transform:uppercase;color:var(--muc);text-decoration:none}
+.bia nav a:hover,.bia nav a[aria-current]{color:var(--do)}
+.bia .tel{font-family:var(--nhan);font-weight:700;font-size:15px;color:var(--xam);text-align:right;text-decoration:none;line-height:1.2}
+.bia .tel b{display:block;font-family:var(--so);font-weight:900;font-size:30px;color:var(--do);letter-spacing:.01em}
+.menu-btn{display:none}
+
+/* tờ lịch */
+.wall{padding:40px 0 70px}
+.block{position:relative;max-width:1100px;margin:0 auto}
+.block .nail{position:absolute;left:50%;top:-22px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:#3a3a3a;box-shadow:0 3px 4px rgba(0,0,0,.35);z-index:5}
+.stub{height:14px;margin:0 6px;background:repeating-linear-gradient(90deg,#f4f4f4 0 9px,#e4e4e4 9px 10px);border-radius:3px 3px 0 0;box-shadow:0 -1px 0 #cfcfcf inset}
+.stack{position:relative}
+.sheet{position:relative;background:var(--giay);display:grid;grid-template-columns:1fr 1.15fr;box-shadow:0 1px 0 #ddd,0 2px 0 #f3f3f3,0 3px 0 #ddd,0 22px 30px -18px rgba(20,40,38,.55);transform-origin:50% 0}
+.sheet.tearing{animation:tear .9s cubic-bezier(.55,0,.75,.4) forwards;z-index:3}
+@keyframes tear{30%{transform:rotate(-2.5deg) translateY(6px)}100%{transform:rotate(-14deg) translate(-40px,140vh);opacity:.6}}
+.sheet.next{position:absolute;inset:0;z-index:1}
+.date-side{padding:26px 30px 24px;border-right:1px dashed #bdbdbd;display:flex;flex-direction:column;align-items:center;text-align:center}
+.month{width:100%;display:flex;justify-content:space-between;font-family:var(--nhan);font-weight:700;font-size:20px;letter-spacing:.06em;text-transform:uppercase;color:var(--do);border-bottom:2px solid var(--do);padding-bottom:6px}
+.weekday{font-family:var(--nhan);font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;margin-top:12px}
+.num{font-family:var(--so);font-weight:900;font-size:clamp(170px,19vw,250px);line-height:.86;letter-spacing:-.02em;margin:8px 0 6px;color:var(--muc)}
+.num.cn{color:var(--do)}
+.lunar{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:center;width:100%;border-top:1px solid var(--ke);padding-top:14px;color:var(--xanh);text-align:left}
+.lunar .ld{font-family:var(--so);font-weight:900;font-size:76px;line-height:.9;grid-row:span 3}
+.lunar b{font-family:var(--nhan);font-weight:700;font-size:20px;line-height:1.2}
+.lunar span{font-family:var(--nhan);font-weight:500;font-size:16.5px;line-height:1.3}
+.tear-btn{margin-top:auto;padding-top:18px;font-family:var(--nhan);font-weight:700;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--xam);background:none;border:0;cursor:pointer;display:flex;align-items:center;gap:8px}
+.tear-btn:hover{color:var(--do)}
+.info-side{padding:26px 30px 26px;display:flex;flex-direction:column;gap:18px}
+.info-side h1{font-family:var(--nhan);font-weight:700;font-size:clamp(26px,2.6vw,34px);line-height:1.12;letter-spacing:.01em;text-transform:uppercase;text-wrap:balance}
+.info-side h1 span{color:var(--do)}
+.today{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--muc);border-bottom:1px solid var(--muc)}
+.today div{padding:10px 0}
+.today div+div{border-left:1px solid var(--ke);padding-left:16px}
+.today small{display:block;font-family:var(--nhan);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--xam)}
+.today b{font-family:var(--nhan);font-weight:700;font-size:21px}
+.upcoming{font-size:16.5px;line-height:1.5}
+.upcoming b{color:var(--do);font-weight:600}
+.urgent{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 16px;background:var(--do);color:#fff;text-decoration:none}
+.urgent small{display:block;font-family:var(--nhan);font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase;opacity:.92}
+.urgent b{font-family:var(--so);font-weight:900;font-size:40px;line-height:1;letter-spacing:.01em}
+.urgent svg{flex:none}
+.urgent:hover{background:#b3161d}
+.visit h2{font-family:var(--nhan);font-weight:700;font-size:19px;letter-spacing:.04em;text-transform:uppercase;color:var(--xanh);margin-bottom:8px}
+.visit form{display:grid;grid-template-columns:1fr 1fr auto;gap:8px}
+.visit input{width:100%;padding:11px 12px;border:1px solid #9a9a9a;font:inherit;font-size:16.5px;border-radius:0;background:#fff}
+.visit input:focus{outline:none;border-color:var(--xanh);box-shadow:0 0 0 2px #c9d6ee}
+.visit button{padding:0 18px;border:0;background:var(--xanh);color:#fff;font-family:var(--nhan);font-weight:700;font-size:17px;letter-spacing:.03em;cursor:pointer}
+.visit button:hover{background:#163d7d}
+.visit p.small{font-size:14.5px;color:var(--xam);margin-top:6px}
+.ok{padding:12px;border:1px solid var(--xanh);color:var(--xanh);font-size:16px}
+
+/* mặt sau tờ lịch: các phần nội dung */
+.back{background:var(--giay);margin-bottom:28px;box-shadow:0 18px 26px -20px rgba(20,40,38,.5)}
+.back-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 28px;border-bottom:2px solid var(--do)}
+.back-head h2{font-family:var(--nhan);font-weight:700;font-size:26px;letter-spacing:.03em;text-transform:uppercase;color:var(--do)}
+.back-head span{font-family:var(--nhan);font-weight:500;font-size:16px;color:var(--xanh)}
+.back-body{padding:24px 28px 28px}
+
+.year{display:grid;grid-template-columns:repeat(6,1fr);border-left:1px solid var(--ke)}
+.year div{border-right:1px solid var(--ke);padding:4px 14px 6px}
+.year .d{font-family:var(--so);font-weight:900;font-size:54px;line-height:1;color:var(--muc)}
+.year .d small{font-family:var(--nhan);font-weight:700;font-size:16px;color:var(--xam);margin-left:4px;letter-spacing:.03em}
+.year b{display:block;font-family:var(--nhan);font-weight:700;font-size:18px;line-height:1.2;margin-top:4px}
+.year span{display:block;font-family:var(--nhan);font-weight:500;font-size:15px;color:var(--xanh);margin-top:2px}
+.year .soon .d{color:var(--do)}
+
+table.zones{width:100%;border-collapse:collapse;font-size:16.5px}
+table.zones th{font-family:var(--nhan);font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:var(--xam);text-align:left;padding:8px 10px;border-bottom:2px solid var(--muc)}
+table.zones td{padding:12px 10px;border-bottom:1px solid var(--ke);vertical-align:top}
+table.zones td:first-child{width:120px}
+table.zones img{width:120px;aspect-ratio:4/3;object-fit:cover}
+table.zones .z{font-family:var(--nhan);font-weight:700;font-size:21px;line-height:1.15}
+table.zones .m{font-family:var(--so);font-weight:900;font-size:30px;line-height:1;white-space:nowrap}
+table.zones .m small{font-family:var(--nhan);font-size:15px;font-weight:700}
+.tablewrap{overflow-x:auto}
+.note{font-size:15.5px;color:var(--xam);margin-top:12px}
+
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cols3 figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cols3 figcaption{font-family:var(--nhan);font-weight:700;font-size:18px;margin-top:8px;line-height:1.2}
+.cols3 figcaption span{display:block;font-weight:500;font-size:15.5px;color:var(--xam);margin-top:2px}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--muc)}
+.steps div{padding:14px 16px 6px 0}
+.steps div+div{padding-left:16px;border-left:1px solid var(--ke)}
+.steps b{display:block;font-family:var(--nhan);font-weight:700;font-size:21px;text-transform:uppercase;letter-spacing:.02em}
+.steps p{font-size:16px;color:#333;margin-top:4px;line-height:1.5}
+
+.qa{columns:2;column-gap:36px}
+.qa div{break-inside:avoid;padding:0 0 16px}
+.qa h3{font-family:var(--nhan);font-weight:700;font-size:19px;color:var(--xanh);line-height:1.25;margin-bottom:4px}
+.qa p{font-size:16.5px}
+
+footer.site{background:#1F3532;color:#d6e4e1;font-size:15.5px;margin-top:46px}
+footer.site .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px;padding:40px 24px 28px}
+footer.site b{font-family:var(--nhan);font-weight:700;font-size:18px;color:#fff;display:block;margin-bottom:6px;letter-spacing:.02em}
+footer.site a{color:#fff}
+footer.site .copy{border-top:1px solid #36524e;padding:14px 24px;font-size:14px;color:#9fb8b3}
+.callbar{display:none}
+
+@media (prefers-reduced-motion:reduce){.sheet.tearing{animation:none;opacity:0}html{scroll-behavior:auto}}
+@media (max-width:1000px){
+  .bia .wrap{grid-template-columns:1fr auto}
+  .bia nav{grid-column:1/-1;order:3}
+  .bia nav ul{justify-content:flex-start}
+  .sheet{grid-template-columns:1fr}
+  .date-side{border-right:0;border-bottom:1px dashed #bdbdbd}
+  .year{grid-template-columns:repeat(3,1fr);row-gap:14px}
+  .cols3{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .steps div:nth-child(3){border-left:0;padding-left:0}
+  footer.site .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{padding-bottom:58px}
+  .wrap{padding:0 14px}
+  .bia nav{display:none}
+  .bia nav.open{display:block}
+  .bia nav ul{flex-direction:column}
+  .bia .tel{display:none}
+  .menu-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid var(--muc);padding:8px 10px;font-family:var(--nhan);font-weight:700;font-size:15px;text-transform:uppercase}
+  .bia .id b{font-size:17px}
+  .bia .id img{width:44px;height:44px}
+  .wall{padding:30px 0 40px}
+  .date-side,.info-side{padding:18px 16px}
+  .num{font-size:150px}
+  .lunar .ld{font-size:60px}
+  .visit form{grid-template-columns:1fr}
+  .visit button{padding:12px}
+  .year{grid-template-columns:1fr 1fr}
+  .cols3,.qa{grid-template-columns:1fr;columns:1}
+  .steps{grid-template-columns:1fr}
+  .steps div+div{border-left:0;padding-left:0;border-top:1px solid var(--ke)}
+  .back-head,.back-body{padding-left:16px;padding-right:16px}
+  .back-head{flex-direction:column;gap:2px}
+  table.zones td:first-child{display:none}
+  footer.site .cols{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;inset:auto 0 0;z-index:40;background:var(--do);color:#fff;justify-content:center;gap:10px;padding:14px;text-decoration:none;font-family:var(--nhan);font-weight:700;font-size:19px;letter-spacing:.03em}
+}
+</style>
+</head>
+<body>
+
+<header class="bia"><div class="wrap">
+  <a class="id" href="#"><img src="assets/img/cpha-logo.png" alt="Logo CPHA"><span><b>Hoa Viên Nghĩa Trang Bình Dương</b><span>Công ty CP Đầu tư Xây dựng Chánh Phú Hòa</span></span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Mục lục</button>
+  <nav id="nav"><ul>
+    <li><a href="#" aria-current="page">Trang chủ</a></li>
+    <li><a href="#lich-le">Lịch lễ</a></li>
+    <li><a href="#khu-mo">Khu mộ</a></li>
+    <li><a href="#tang-le">Tang lễ</a></li>
+    <li><a href="#hoa-vien">Hoa viên</a></li>
+    <li><a href="#hoi-dap">Hỏi đáp</a></li>
+    <li><a href="#lien-he">Liên hệ</a></li>
+  </ul></nav>
+  <a class="tel" href="tel:0818555444">Tổng đài<b>0818 555 444</b></a>
+</div></header>
+
+<main>
+<section class="wall"><div class="wrap">
+  <div class="block">
+    <div class="nail" aria-hidden="true"></div>
+    <div class="stub" aria-hidden="true"></div>
+    <div class="stack" id="stack">
+      <article class="sheet" id="sheet" aria-live="polite"></article>
+    </div>
+  </div>
+</div></section>
+
+<div class="wrap">
+  <section class="back" id="lich-le">
+    <div class="back-head"><h2>Lịch lễ trong năm tại Hoa Viên</h2><span id="year-label">Ngày dương lịch tính theo âm lịch</span></div>
+    <div class="back-body">
+      <div class="year" id="year"></div>
+      <p class="note">Lịch tổ chức chi tiết từng năm được công bố trên website và các kênh chính thức. Mùa cao điểm nên gọi trước để được hướng dẫn giờ đi và dịch vụ chăm sóc mộ.</p>
+    </div>
+  </section>
+
+  <section class="back" id="khu-mo">
+    <div class="back-head"><h2>Các khu mộ</h2><span>Diện tích tiêu chuẩn theo quy hoạch · giá theo vị trí</span></div>
+    <div class="back-body">
+      <div class="tablewrap"><table class="zones">
+        <thead><tr><th></th><th>Khu</th><th>Diện tích</th><th>Vị trí, đặc điểm</th></tr></thead>
+        <tbody>
+          <tr><td><img src="assets/img/long-phung.jpg" alt=""></td><td class="z">Long Phụng Minh Đồ</td><td class="m">5,735 <small>m²/mộ</small></td><td>Mộ đơn, đôi; gần Chùa Thiên Phước; đường Minh Đạo – Minh Lộc. Chi phí hợp lý.</td></tr>
+          <tr><td><img src="assets/img/avenue.jpg" alt=""></td><td class="z">Đại Lộ Vĩnh Hằng</td><td class="m">11,63 <small>m²/mộ</small></td><td>Gần cổng chính và các công trình tâm linh, dễ tìm, dễ thăm viếng.</td></tr>
+          <tr><td><img src="assets/img/linh-hoa.jpg" alt=""></td><td class="z">Linh Hoa Tuệ Đàn</td><td class="m">10,87 <small>m²/mộ</small></td><td>Suối biếc, rừng tre; chọn hướng huyệt theo phong thủy; nơi tổ chức đại lễ.</td></tr>
+          <tr><td><img src="assets/img/song-than.jpg" alt=""></td><td class="z">Song Thân</td><td class="m">66 <small>m²</small></td><td>Nhà thờ họ tộc, lưu cốt nhiều thế hệ; đường Minh Nghĩa rộng 6 m; số lượng giới hạn.</td></tr>
+          <tr><td><img src="assets/img/truc-lam.jpg" alt=""></td><td class="z">Trúc Lâm Bích Thủy</td><td class="m">64–81 <small>m²</small></td><td>Khu gia tộc tối đa 10 mộ; nền cao dốc nhẹ trên đường Thiên Thai.</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">Quyền sử dụng 50 năm hoặc vĩnh viễn tùy sản phẩm · 30 ngày cân nhắc lại nếu chưa an táng · xây mộ, lắp bia do đội thợ Hoa Viên thực hiện.</p>
+    </div>
+  </section>
+
+  <section class="back" id="tang-le">
+    <div class="back-head"><h2>Tang lễ trọn gói</h2><span>Gọi 0818 555 444 · hạng mục, chi phí thống nhất trước khi làm</span></div>
+    <div class="back-body">
+      <div class="steps">
+        <div><b>Khâm liệm</b><p>Chuẩn bị chu đáo cho người đã khuất theo nội dung gia đình đã thống nhất.</p></div>
+        <div><b>Nhập quan</b><p>Trang nghiêm, theo phong tục, tôn giáo và nguyện vọng gia đình.</p></div>
+        <div><b>Lễ viếng</b><p>Bàn thờ, không gian lễ viếng, tang phục và nhạc lễ.</p></div>
+        <div><b>Di quan</b><p>Xe tang, đoàn đưa tiễn đến nơi an táng hoặc hỏa táng.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="back" id="hoa-vien">
+    <div class="back-head"><h2>Hoa viên 300 ha giữa rừng</h2><span>Quy hoạch từ năm 2006 · KP Bông Trang, P. Chánh Phú Hòa</span></div>
+    <div class="back-body">
+      <div class="cols3">
+        <figure><img src="assets/img/linh-hoa-night.jpg" alt="Linh Hoa Tuệ Đàn về đêm"><figcaption>Linh Hoa Tuệ Đàn<span>Đêm đại lễ cầu siêu, cầu an</span></figcaption></figure>
+        <figure><img src="assets/img/thien-phuoc.jpg" alt="Chùa Thiên Phước"><figcaption>Chùa Thiên Phước<span>Lễ bái và lưu giữ tro cốt</span></figcaption></figure>
+        <figure><img src="assets/img/lotus.jpg" alt="Vĩnh Hằng Đài"><figcaption>Vĩnh Hằng Đài<span>Đài sen trên Đại Lộ Vĩnh Hằng</span></figcaption></figure>
+        <figure><img src="assets/img/care-team.jpg" alt="Đội chăm sóc mộ"><figcaption>Đội chăm sóc<span>Bồi đất, trồng cỏ, giữ mộ sạch đẹp</span></figcaption></figure>
+        <figure><img src="assets/img/bus.jpg" alt="Xe đưa đón"><figcaption>Xe đưa đón<span>Đưa khách từ TP. HCM đi xem đất</span></figcaption></figure>
+        <figure><img src="assets/img/gate.jpg" alt="Cổng tam quan"><figcaption>Cổng tam quan<span>Lối vào rợp bóng cây</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="back" id="hoi-dap">
+    <div class="back-head"><h2>Gia đình thường hỏi</h2><span>Xem đầy đủ ở trang Hỏi đáp</span></div>
+    <div class="back-body qa">
+      <div><h3>Tôi tìm vị trí mộ người thân bằng cách nào?</h3><p>Gọi 0818 555 444, cung cấp họ tên, tuổi và năm mất; hoặc dùng màn hình tra cứu tại văn phòng Hoa Viên.</p></div>
+      <div><h3>Tôi có được tự chọn vị trí không?</h3><p>Có. Gia đình xem thực tế và chọn trong số vị trí còn trống, được tư vấn loại mộ và hướng.</p></div>
+      <div><h3>Mua rồi có được cân nhắc lại?</h3><p>Có 30 ngày cân nhắc lại, với điều kiện chưa thực hiện an táng.</p></div>
+      <div><h3>Thanh toán thế nào?</h3><p>Tiền mặt, chuyển khoản, séc hoặc chi phiếu ghi trả Công ty CP Đầu tư Xây dựng Chánh Phú Hòa. Chưa áp dụng trả góp.</p></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="site" id="lien-he">
+  <div class="cols">
+    <div><b>Văn phòng Hoa Viên</b>Khu phố Bông Trang, phường Chánh Phú Hòa, TP. HCM<br>Tổng đài <a href="tel:0818555444">0818 555 444</a> · cphaco.vn<br>7h30–17h00 tất cả các ngày</div>
+    <div><b>Chi nhánh 1</b>99 Điện Biên Phủ, P. Gia Định<br>(028) 35.127.898 · 0778.454.544</div>
+    <div><b>Chi nhánh 2</b>140C Nguyễn Cư Trinh, P. Cầu Ông Lãnh<br>(028) 3 838 2389</div>
+    <div><b>Chi nhánh 3</b>253D Lương Định Của, P. Bình Trưng<br>0947.542.279</div>
+  </div>
+  <div class="copy">© 2026 Công ty CP Đầu tư Xây dựng Chánh Phú Hòa · Bản demo giao diện</div>
+</footer>
+<a class="callbar" href="tel:0818555444">Gọi tổng đài 0818 555 444</a>
+
+<script>
+/* Âm lịch Việt Nam (thuật toán Hồ Ngọc Đức, múi giờ +7) */
+var INT=Math.floor,PI=Math.PI;
+function jd(d,m,y){var a=INT((14-m)/12),Y=y+4800-a,M=m+12*a-3;return d+INT((153*M+2)/5)+365*Y+INT(Y/4)-INT(Y/100)+INT(Y/400)-32045}
+function newMoon(k){var T=k/1236.85,T2=T*T,T3=T2*T,dr=PI/180,J=2415020.75933+29.53058868*k+.0001178*T2-.000000155*T3;J+=.00033*Math.sin((166.56+132.87*T-.009173*T2)*dr);var M=359.2242+29.10535608*k-.0000333*T2-.00000347*T3,Mp=306.0253+385.81691806*k+.0107306*T2+.00001236*T3,F=21.2964+390.67050646*k-.0016528*T2-.00000239*T3;var C=(.1734-.000393*T)*Math.sin(M*dr)+.0021*Math.sin(2*dr*M)-.4068*Math.sin(Mp*dr)+.0161*Math.sin(dr*2*Mp)-.0004*Math.sin(dr*3*Mp)+.0104*Math.sin(dr*2*F)-.0051*Math.sin(dr*(M+Mp))-.0074*Math.sin(dr*(M-Mp))+.0004*Math.sin(dr*(2*F+M))-.0004*Math.sin(dr*(2*F-M))-.0006*Math.sin(dr*(2*F+Mp))+.001*Math.sin(dr*(2*F-Mp))+.0005*Math.sin(dr*(2*Mp+M));var dt=T<-11?.001+.000839*T+.0002261*T2-.00000845*T3-.000000081*T*T3:-.000278+.000265*T+.000262*T2;return INT(J+C-dt+.5+7/24)}
+function sunLong(j){var T=(j-2451545.5-7/24)/36525,T2=T*T,dr=PI/180,M=357.5291+35999.0503*T-.0001559*T2-.00000048*T*T2,L0=280.46645+36000.76983*T+.0003032*T2,DL=(1.9146-.004817*T-.000014*T2)*Math.sin(dr*M)+(.019993-.000101*T)*Math.sin(dr*2*M)+.00029*Math.sin(dr*3*M),L=(L0+DL)*dr;L-=PI*2*INT(L/(PI*2));return INT(L/PI*6)}
+function month11(y){var k=INT((jd(31,12,y)-2415021)/29.530588853),n=newMoon(k);return sunLong(n)>=9?newMoon(k-1):n}
+function leapOff(a){var k=INT((a-2415021.076998695)/29.530588853+.5),last,i=1,arc=sunLong(newMoon(k+i));do{last=arc;i++;arc=sunLong(newMoon(k+i))}while(arc!=last&&i<14);return i-1}
+function lunar(d,m,y){var n=jd(d,m,y),k=INT((n-2415021.076998695)/29.530588853),ms=newMoon(k+1);if(ms>n)ms=newMoon(k);var a=month11(y),b=a,ly;if(a>=ms){ly=y;a=month11(y-1)}else{ly=y+1;b=month11(y+1)}var ld=n-ms+1,diff=INT((ms-a)/29),leap=0,lm=diff+11;if(b-a>365){var lo=leapOff(a);if(diff>=lo){lm=diff+10;if(diff==lo)leap=1}}if(lm>12)lm-=12;if(lm>=11&&diff<4)ly-=1;return{d:ld,m:lm,y:ly,leap:leap,jd:n}}
+var CAN=['Giáp','Ất','Bính','Đinh','Mậu','Kỷ','Canh','Tân','Nhâm','Quý'],CHI=['Tý','Sửu','Dần','Mão','Thìn','Tỵ','Ngọ','Mùi','Thân','Dậu','Tuất','Hợi'];
+var THU=['Chủ nhật','Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy'];
+var THANG_AM=['','Giêng','Hai','Ba','Tư','Năm','Sáu','Bảy','Tám','Chín','Mười','Một','Chạp'];
+function canChiNam(y){return CAN[(y+6)%10]+' '+CHI[(y+8)%12]}
+function canChiNgay(j){return CAN[(j+9)%10]+' '+CHI[(j+1)%12]}
+function canChiThang(m,y){return CAN[(y*12+m+3)%10]+' '+CHI[(m+1)%12]}
+
+/* Các lễ của Hoa Viên, theo âm lịch (Thanh Minh theo tiết khí, khoảng 4–5/4 dương lịch) */
+var LE=[
+  {ten:'Rằm tháng Giêng',m:1,d:15,viec:'Thăm viếng đầu năm, dâng hương cầu an.'},
+  {ten:'Giỗ Tổ Hùng Vương',m:3,d:10,viec:'Hướng về cội nguồn, uống nước nhớ nguồn.'},
+  {ten:'Tiết Thanh Minh',solar:[4,5],viec:'Lễ Cầu Siêu – Cầu An; gia đình về tảo mộ, chỉnh trang mộ.'},
+  {ten:'Vu Lan báo hiếu',m:7,d:15,viec:'Đại lễ Vu Lan tại Linh Hoa Tuệ Đàn, tưởng niệm tổ tiên.'},
+  {ten:'Rằm tháng Mười',m:10,d:15,viec:'Lễ Hạ nguyên, thăm viếng và dâng hương.'},
+  {ten:'Tảo mộ tháng Chạp',m:12,d:1,viec:'Chăm sóc nơi an nghỉ trước Tết; nên gọi hẹn trước.'}
+];
+function addDays(dt,n){var x=new Date(dt);x.setDate(x.getDate()+n);return x}
+function upcoming(from,count){
+  var out=[],seen={};
+  for(var i=0;i<420&&out.length<count;i++){
+    var dt=addDays(from,i),l=lunar(dt.getDate(),dt.getMonth()+1,dt.getFullYear());
+    LE.forEach(function(e){
+      var key=e.ten+dt.getFullYear();
+      if(seen[key])return;
+      var hit=e.solar?(dt.getMonth()+1===e.solar[0]&&dt.getDate()===e.solar[1]):(l.leap===0&&l.m===e.m&&l.d===e.d);
+      if(hit){seen[key]=1;out.push({e:e,dt:dt,l:l,days:i})}
+    });
+  }
+  return out;
+}
+function pad(n){return(n<10?'0':'')+n}
+
+var today=new Date();today.setHours(0,0,0,0);
+var events=upcoming(today,6);
+var pages=[{dt:today,ev:null}].concat(events.map(function(x){return{dt:x.dt,ev:x}}));
+var page=0;
+
+function sheetHTML(p){
+  var dt=p.dt,l=lunar(dt.getDate(),dt.getMonth()+1,dt.getFullYear()),cn=dt.getDay()===0||!!p.ev;
+  var nxt=events[0],isToday=!p.ev;
+  var head=isToday
+    ?'<h1>Hoa viên 300 ha giữa rừng, <span>mở cửa hôm nay</span> 7h30 – 17h00</h1>'
+    :'<h1><span>'+p.ev.e.ten+'</span> · '+THU[dt.getDay()].toLowerCase()+' '+pad(dt.getDate())+'/'+pad(dt.getMonth()+1)+'</h1>';
+  var up=isToday
+    ?(nxt?'<p class="upcoming">Lễ gần nhất: <b>'+nxt.e.ten+'</b>, '+THU[nxt.dt.getDay()].toLowerCase()+' '+pad(nxt.dt.getDate())+'/'+pad(nxt.dt.getMonth()+1)+' (còn '+nxt.days+' ngày). '+nxt.e.viec+'</p>':'')
+    :'<p class="upcoming">'+p.ev.e.viec+' Còn <b>'+p.ev.days+' ngày</b>. Mùa lễ đông người, gia đình nên hẹn trước để có xe đón và chỗ đậu.</p>';
+  return ''+
+  '<div class="date-side">'+
+    '<div class="month"><span>Tháng '+(dt.getMonth()+1)+'</span><span>'+dt.getFullYear()+'</span></div>'+
+    '<div class="weekday">'+THU[dt.getDay()]+'</div>'+
+    '<div class="num'+(cn?' cn':'')+'">'+dt.getDate()+'</div>'+
+    '<div class="lunar"><div class="ld">'+l.d+'</div><b>Tháng '+THANG_AM[l.m]+(l.leap?' nhuận':'')+' âm lịch</b><span>Năm '+canChiNam(l.y)+'</span><span>Ngày '+canChiNgay(l.jd)+' · tháng '+canChiThang(l.m,l.y)+'</span></div>'+
+    '<button class="tear-btn" type="button" id="tear"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 7l2-3M20 7l-2-3M6 7v13h12V7"/></svg>'+(page<pages.length-1?'Xé tờ lịch · xem lễ kế tiếp':'Về hôm nay')+'</button>'+
+  '</div>'+
+  '<div class="info-side">'+head+
+    '<div class="today"><div><small>Giờ mở cửa</small><b>7h30 – 17h00</b></div><div><small>Địa chỉ</small><b>KP Bông Trang, P. Chánh Phú Hòa</b></div></div>'+
+    up+
+    '<a class="urgent" href="tel:0818555444"><span><small>Gia đình vừa có người mất</small><b>0818 555 444</b></span><svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg></a>'+
+    '<div class="visit"><h2>'+(isToday?'Hẹn ngày xem đất':'Hẹn về thăm dịp '+p.ev.e.ten.toLowerCase())+'</h2><form data-demo><input name="ten" autocomplete="name" placeholder="Họ tên" required aria-label="Họ tên"><input name="sdt" type="tel" autocomplete="tel" placeholder="Số điện thoại" required aria-label="Số điện thoại"><button type="submit">Đặt lịch</button></form><p class="small">Có xe đưa đón từ TP. HCM. Nhân viên gọi lại trong giờ làm việc.</p></div>'+
+  '</div>';
+}
+var stack=document.getElementById('stack');
+function render(el,i){el.innerHTML=sheetHTML(pages[i]);wire(el)}
+function wire(el){
+  el.querySelector('#tear').addEventListener('click',tear);
+  el.querySelectorAll('form[data-demo]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();f.outerHTML='<p class="ok">Đã ghi nhận. Nhân viên sẽ gọi lại để hẹn ngày và giờ xe đón.</p>'})});
+}
+function tear(){
+  var cur=document.getElementById('sheet'),ni=(page+1)%pages.length;
+  var nx=document.createElement('article');nx.className='sheet next';
+  page=ni;render(nx,ni);nx.id='';stack.appendChild(nx);
+  cur.id='';cur.classList.add('tearing');
+  setTimeout(function(){cur.remove();nx.classList.remove('next');nx.id='sheet';},matchMedia('(prefers-reduced-motion: reduce)').matches?0:880);
+}
+render(document.getElementById('sheet'),0);
+
+/* lịch lễ cả năm */
+var yr=document.getElementById('year');
+events.slice().sort(function(a,b){return a.dt-b.dt}).forEach(function(x,i){
+  yr.insertAdjacentHTML('beforeend','<div class="'+(i===0?'soon':'')+'"><div class="d">'+pad(x.dt.getDate())+'<small>/'+pad(x.dt.getMonth()+1)+'/'+x.dt.getFullYear()+'</small></div><b>'+x.e.ten+'</b><span>'+(x.e.solar?'Tiết khí':'Ngày '+x.l.d+' tháng '+THANG_AM[x.l.m]+' ÂL')+'</span></div>');
+});
+document.getElementById('year-label').textContent='12 tháng tới, tính từ hôm nay '+pad(today.getDate())+'/'+pad(today.getMonth()+1)+'/'+today.getFullYear();
+document.querySelector('.menu-btn').addEventListener('click',function(){var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)});
+</script>
+</body>
+</html>

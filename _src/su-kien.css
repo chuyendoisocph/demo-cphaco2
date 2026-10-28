@@ -1,0 +1,75 @@
+.phero .hsub{max-width:36em;font-size:18px;line-height:1.55}
+
+/* dải 12 tháng âm lịch, mỗi sự kiện là một mốc */
+.year{position:relative;height:200px;margin-top:8px}
+.months{position:absolute;left:0;right:0;top:50%;display:grid;grid-template-columns:repeat(12,1fr);border-top:2px solid var(--xanh-sau)}
+.months span{padding-top:17px;font-size:13.5px;color:var(--nhat);border-left:1px solid var(--ke);padding-left:8px;height:22px;box-sizing:content-box}
+.months span:first-child{border-left:0;padding-left:0}
+.pin{position:absolute;left:calc(var(--m) / 12 * 100%);top:50%;width:0;text-decoration:none}
+.pin::before{content:"";position:absolute;left:-8px;top:-9px;width:16px;height:16px;border-radius:50%;background:var(--gach);box-shadow:0 0 0 5px #fff,0 0 0 6px var(--gach-nhat);transition:transform .2s}
+.pin:hover::before{transform:scale(1.2)}
+.pin b,.pin small{position:absolute;left:-12px;white-space:nowrap}
+.pin b{bottom:auto;top:44px;font-size:16px;color:var(--xanh-sau)}
+.pin small{top:68px;font-size:13.5px;color:var(--phu)}
+.pin.up b{top:auto;bottom:46px}
+.pin.up small{top:auto;bottom:24px}
+.pin.end b,.pin.end small{left:auto;right:-12px;text-align:right}
+.pin:hover b{color:var(--gach)}
+
+/* sự kiện nổi bật */
+.feat{position:relative;color:#fff;background:#0b1a12;scroll-margin-top:60px}
+.feat>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,16,28,.88) 0,rgba(5,16,28,.7) 45%,rgba(5,16,28,.1) 80%)}
+.feat .wrap{position:relative;z-index:2;padding-top:100px;padding-bottom:100px}
+.feat-box{max-width:580px}
+.when{display:block;font-size:14.5px;font-weight:600;color:var(--gach)}
+.feat .when{color:#f0c3b1}
+.feat h2,.ev-row h2{font-size:clamp(28px,2.8vw,38px);line-height:1.2;letter-spacing:-.015em;margin-top:10px}
+.feat .ilead{font-size:18.5px;color:#fff;margin-top:18px}
+.feat p{color:rgba(255,255,255,.85);margin-top:14px}
+.hl{list-style:none;margin-top:22px;display:grid;gap:8px}
+.hl li{position:relative;padding-left:28px}
+.hl li::before{content:"";position:absolute;left:2px;top:6px;width:14px;height:8px;border-left:2px solid var(--gach);border-bottom:2px solid var(--gach);transform:rotate(-45deg)}
+.feat .hl li::before{border-color:#f0c3b1}
+
+/* ba sự kiện còn lại */
+.evs{display:grid;gap:88px}
+.ev-row{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center;scroll-margin-top:80px}
+.ev-row.flip figure{order:2}
+.ev-row figure{margin:0;aspect-ratio:4/3;overflow:hidden}
+.ev-row figure img{width:100%;height:100%;object-fit:cover}
+.ev-row h2{color:var(--xanh-sau)}
+.ev-row .ilead{font-size:18px;margin-top:16px}
+.ev-row p:not(.ilead){color:var(--phu);margin-top:12px}
+
+/* lời mời cuối trang */
+.invite{background:var(--xanh-sau);color:#c8d6e6;padding:64px 0}
+.invite .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.invite h2{color:#fff;font-size:clamp(24px,2.4vw,30px);line-height:1.25}
+.invite p{margin-top:12px}
+.invite .acts{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:flex-end}
+.invite .tel{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-size:24px;font-weight:700;letter-spacing:.02em}
+
+@media (max-width:1080px){
+  .ev-row{grid-template-columns:1fr;gap:28px}
+  .ev-row.flip figure{order:0}
+  .ev-row figure{aspect-ratio:16/9}
+  .evs{gap:64px}
+  .invite .wrap{grid-template-columns:1fr;gap:24px}
+  .invite .acts{justify-content:flex-start}
+}
+@media (max-width:860px){
+  /* dải tháng thành danh sách dọc */
+  .year{height:auto;display:grid;gap:0;border-left:2px solid var(--xanh-sau);margin-left:8px}
+  .months{display:none}
+  .pin{position:relative;left:auto;top:auto;width:auto;padding:14px 0 14px 26px;display:block}
+  .pin::before{left:-9px;top:20px}
+  .pin b,.pin small,.pin.up b,.pin.up small,.pin.end b,.pin.end small{position:static;display:block;white-space:normal;text-align:left}
+}
+@media (max-width:760px){
+  .phero .hsub{font-size:16px}
+  .feat::before{background:linear-gradient(0deg,rgba(5,16,28,.92) 0,rgba(5,16,28,.75) 60%,rgba(5,16,28,.5) 100%)}
+  .feat .wrap{padding-top:64px;padding-bottom:56px}
+  .feat .ilead,.ev-row .ilead{font-size:17px}
+  .invite{padding:48px 0}
+}

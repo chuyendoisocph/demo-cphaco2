@@ -1,0 +1,13 @@
+# công cụ thiết kế và kết quả rà soát (chỉ dùng khi phát triển)
+.hallmark/
+.claude/
+.impeccable/
+skills-lock.json
+
+# bản sao lưu trước khi sửa và ảnh gốc chưa nén
+_src/*.truoc-ux.*
+_src/truoc-hallmark/
+_src/img-goc/
+
+__pycache__/
+node_modules/

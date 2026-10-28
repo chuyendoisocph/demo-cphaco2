@@ -1,0 +1,40 @@
+/* nút lọc chủ đề */
+.cats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.cats button{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--ke);border-radius:30px;background:#fff;font:inherit;font-size:15px;font-weight:500;color:var(--xanh-sau);cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.cats button span{font-size:13px;color:var(--nhat)}
+.cats button:hover{border-color:var(--xanh)}
+.cats button.on{background:var(--xanh-sau);border-color:var(--xanh-sau);color:#fff}
+.cats button.on span{color:#b7c7d8}
+
+/* lưới bài viết, bài đầu nằm ngang */
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
+.post-card{display:flex;flex-direction:column;text-decoration:none;color:var(--chu)}
+.post-card .ph{aspect-ratio:3/2;overflow:hidden}
+.post-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.post-card:hover img{transform:scale(1.05)}
+.post-card .tx{padding-top:16px}
+.meta{font-size:13.5px;color:var(--nhat)}
+.meta b{color:var(--gach);font-weight:600}
+.post-card h2{font-size:19px;line-height:1.4;color:var(--xanh-sau);margin-top:6px;transition:color .2s}
+.post-card:hover h2{color:var(--xanh)}
+.post-card p{font-size:15.5px;color:var(--phu);margin-top:8px;line-height:1.6}
+.lead-post{grid-column:1/-1;display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center;padding-bottom:36px;border-bottom:1px solid var(--ke);margin-bottom:8px}
+.lead-post .ph{aspect-ratio:16/10}
+.lead-post .tx{padding-top:0}
+.lead-post h2{font-size:clamp(24px,2.4vw,32px);line-height:1.25}
+.lead-post p{font-size:17px;margin-top:14px}
+.lead-post .link{margin-top:20px}
+.post-card[hidden]{display:none}
+
+@media (max-width:1080px){
+  .posts-grid{grid-template-columns:1fr 1fr}
+  .lead-post{grid-template-columns:1fr;gap:20px}
+}
+@media (max-width:760px){
+  .cats{flex-wrap:nowrap;overflow-x:auto;margin:0 -24px 32px;padding:0 24px;scrollbar-width:none}
+  .cats::-webkit-scrollbar{display:none}
+  .cats button{flex:none}
+  .posts-grid{grid-template-columns:1fr;gap:32px}
+  .lead-post{padding-bottom:28px}
+}
+@media (max-width:420px){.cats{margin:0 -16px 32px;padding:0 16px}}

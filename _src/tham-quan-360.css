@@ -1,0 +1,60 @@
+/* khung ảnh 360°: chữ tiêu đề trên cùng, chú thích và nút chuyển điểm ở dưới */
+.tour{position:relative;height:clamp(520px,calc(100svh - 120px),820px);background:#11292d;color:#fff;overflow:hidden}
+.pano{position:absolute;inset:0}
+.pano:focus-visible{outline:3px solid #fff;outline-offset:-6px}
+.tour::before,.tour::after{content:"";position:absolute;left:0;right:0;z-index:2;pointer-events:none}
+.tour::before{top:0;height:180px;background:linear-gradient(180deg,rgba(5,16,28,.7),rgba(5,16,28,0))}
+.tour::after{bottom:0;height:300px;background:linear-gradient(0deg,rgba(5,16,28,.82),rgba(5,16,28,0))}
+.tour-top,.tour-cap{position:absolute;z-index:3;left:0;right:0;max-width:1220px;margin:0 auto;padding:0 24px;pointer-events:none}
+.tour-top{top:26px}
+.tour-top h1{font-size:clamp(26px,2.6vw,36px);line-height:1.15;margin-top:10px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.tour-top p{margin-top:6px;font-size:16px;color:rgba(255,255,255,.88)}
+.tour-top .crumb{pointer-events:auto}
+.tour-cap{bottom:34px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.tour-cap small{font-size:13.5px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.8)}
+.tour-cap small b{color:#fff}
+.tour-cap h2{font-size:clamp(28px,3.2vw,44px);line-height:1.1;margin-top:6px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+.tour-cap p{margin-top:8px;max-width:52ch;color:rgba(255,255,255,.9)}
+.tour-btns{display:flex;gap:8px;flex:none;pointer-events:auto}
+.tour-btns button{height:46px;border:1px solid rgba(255,255,255,.6);background:rgba(5,16,28,.25);color:#fff;font:inherit;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;cursor:pointer;transition:background .2s}
+.tour-btns button:hover{background:rgba(255,255,255,.18)}
+#t-prev{width:46px;justify-content:center;padding:0}
+#t-next{background:#fff;color:var(--xanh-sau);border-color:#fff}
+#t-next:hover{background:var(--xanh-nhat)}
+.tour-nojs{position:absolute;inset:0;display:grid;place-items:center;z-index:4}
+
+/* điều khiển của Pannellum: dời xuống dưới tiêu đề, nút to hơn cho dễ bấm */
+.tour .pnlm-controls-container{top:auto;bottom:auto;left:auto;right:24px;top:120px;z-index:4}
+.tour .pnlm-zoom-controls,.tour .pnlm-fullscreen-toggle-button{border-radius:0;border:0;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.tour .pnlm-panorama-info{display:none!important}
+.tour .pnlm-load-box{background:rgba(5,16,28,.85);border-radius:0}
+
+/* mũi tên đi tới điểm kế bên */
+.hs-go{width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer;display:grid;place-items:center;transition:transform .2s}
+.hs-go::before{content:"";width:14px;height:14px;border-top:3px solid var(--gach);border-right:3px solid var(--gach);transform:translateY(3px) rotate(-45deg)}
+.hs-go:hover{transform:scale(1.1)}
+.hs-go span{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);white-space:nowrap;background:rgba(5,16,28,.85);color:#fff;font-size:13.5px;font-weight:600;padding:5px 10px}
+
+/* danh sách điểm */
+.tgroup{font-size:19px;color:var(--xanh-sau);margin:28px 0 14px;display:flex;align-items:baseline;gap:10px}
+.tgroup span{font-size:14px;font-weight:500;color:var(--nhat)}
+.tlist{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tlist button{display:flex;gap:12px;align-items:center;text-align:left;padding:8px;border:1px solid var(--ke);background:#fff;font:inherit;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.tlist button:hover{border-color:var(--xanh)}
+.tlist button[aria-current]{border-color:var(--gach);box-shadow:inset 0 0 0 1px var(--gach)}
+.tlist img{width:88px;height:62px;object-fit:cover;flex:none;background:var(--nen)}
+.tlist small{display:block;font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--nhat)}
+.tlist b{display:block;color:var(--chu);font-size:15.5px;line-height:1.3}
+
+@media (max-width:1100px){.tlist{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){
+  .tour{height:calc(100svh - 176px);min-height:480px}
+  .tour-top{top:16px;padding:0 16px}
+  .tour-top p{display:none}
+  .tour-cap{bottom:20px;padding:0 16px;flex-direction:column;align-items:stretch;gap:14px}
+  .tour-cap p{font-size:15px}
+  .tour-btns #t-next{flex:1;justify-content:center}
+  .tour .pnlm-controls-container{right:16px;top:auto;bottom:210px}
+  .tlist{grid-template-columns:1fr 1fr}
+}
+@media (max-width:480px){.tlist{grid-template-columns:1fr}}

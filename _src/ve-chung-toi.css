@@ -1,0 +1,83 @@
+.muted{color:var(--phu)}
+p.body{margin-top:20px}
+
+/* giới thiệu */
+.aintro{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center}
+.aintro p.body:first-of-type{margin-top:24px;font-size:18px}
+.map{margin:0}
+.map img{width:100%;box-shadow:var(--bong),0 0 0 1px var(--ke)}
+.map figcaption{font-size:13.5px;color:var(--nhat);margin-top:10px}
+
+/* số liệu */
+.stats{background:var(--xanh-sau);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats div{padding:34px 24px 36px;border-left:1px solid rgba(255,255,255,.14)}
+.stats div:first-child{border-left:0;padding-left:0}
+.stats b{display:block;font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-.015em;line-height:1.15;white-space:nowrap}
+.stats span{display:block;font-size:14.5px;color:#b7c7d8;margin-top:6px}
+
+/* giá trị: ba thẻ trên ảnh chùa */
+.values{position:relative;padding:110px 0}
+.values>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.values::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(10,44,80,.62)}
+.values .wrap{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.values article{background:#fff;padding:34px 30px 36px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.values span{font-size:30px;font-weight:700;color:var(--gach);letter-spacing:-.02em}
+.values h2{font-size:24px;color:var(--xanh-sau);margin-top:6px}
+.values .lead-p{font-weight:600;color:var(--chu);margin-top:14px;line-height:1.55}
+.values p{font-size:15.5px;color:var(--phu);margin-top:12px;line-height:1.65}
+
+/* công trình */
+.works{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
+.works figure{margin:0;position:relative;overflow:hidden}
+.works figure:first-child{grid-row:span 2}
+.works figure:last-child{grid-column:2/4}
+.works img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.works figure:hover img{transform:scale(1.04)}
+.works figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;color:#fff;font-weight:600;font-size:16px;background:linear-gradient(0deg,rgba(5,16,28,.75),rgba(5,16,28,0))}
+
+/* niềm tin */
+.trust{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:center}
+.trust figure{margin:0;aspect-ratio:4/3;overflow:hidden}
+.trust figure img{width:100%;height:100%;object-fit:cover}
+.trust p.body{font-size:18px;padding-left:20px;border-left:2px solid var(--gach)}
+
+/* đơn vị vận hành */
+.org{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start}
+.org-main{display:grid;grid-template-columns:96px 1fr;gap:28px}
+.org-main>img{width:96px;height:96px}
+.org h2{font-size:26px;color:var(--xanh-sau)}
+.co{font-weight:600;color:var(--gach);margin-top:4px}
+.org dl{margin-top:20px;border-top:1px solid var(--ke)}
+.org dl div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--ke)}
+.org dt{font-size:14.5px;color:var(--nhat)}
+.org dd{font-weight:500}
+.org dd a{text-decoration:none;font-weight:600}
+.org-br{background:var(--nen);padding:30px 30px 28px}
+.org-br h3{font-size:19px;color:var(--xanh-sau)}
+.org-br ul{list-style:none;margin:12px 0 18px}
+.org-br li{padding:14px 0;border-bottom:1px solid #dde3e9;font-size:15.5px;line-height:1.5}
+.org-br li b{display:block;color:var(--xanh-sau)}
+.org-br li span{display:block;color:var(--phu);font-size:14.5px}
+
+@media (max-width:1080px){
+  .aintro,.trust,.org{grid-template-columns:1fr;gap:40px}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stats div:nth-child(3){border-left:0;padding-left:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.14)}
+  .values .wrap{grid-template-columns:1fr}
+  .values{padding:72px 0}
+}
+@media (max-width:760px){
+  .stats div{padding:24px 14px 26px}
+  .works{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .works figure:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10}
+  .works figure:last-child{grid-column:auto}
+  .works figure{aspect-ratio:4/3}
+  .works figcaption{font-size:14px;padding:30px 12px 10px}
+  .values article{padding:26px 22px 28px}
+  .org-main{grid-template-columns:1fr;gap:16px}
+  .org-main>img{width:72px;height:72px}
+  .org dl div{grid-template-columns:1fr;gap:2px}
+  .org-br{padding:24px 20px}
+}

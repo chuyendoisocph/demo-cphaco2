@@ -1,0 +1,41 @@
+.grp-head{margin-bottom:36px}
+
+/* thẻ Hoa Viên */
+.park{display:grid;grid-template-columns:1.1fr 1fr;background:#fff;box-shadow:var(--bong),0 0 0 1px var(--ke)}
+.park>img{width:100%;height:100%;min-height:380px;object-fit:cover}
+.park-tx{padding:38px 40px 40px}
+.park h3{font-size:26px;line-height:1.25;color:var(--xanh-sau)}
+.park dl{margin-top:20px;border-top:1px solid var(--ke)}
+.park dl div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--ke)}
+.park dt{font-size:14.5px;color:var(--nhat)}
+.park dd{font-weight:500}
+.park dd a{text-decoration:none;font-weight:600}
+.park dd a.big{font-size:22px;color:var(--gach);letter-spacing:.02em}
+.park .acts{display:flex;align-items:center;gap:24px;margin-top:26px;flex-wrap:wrap}
+
+/* ba chi nhánh */
+.brs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.brs article{background:#fff;padding:28px 28px 26px;box-shadow:0 0 0 1px var(--ke);display:flex;flex-direction:column;position:relative}
+.brs .no{position:absolute;top:22px;right:24px;font-size:44px;font-weight:700;color:var(--gach-nhat);line-height:1;letter-spacing:-.03em}
+.brs h3{font-size:19px;color:var(--xanh-sau);padding-right:44px}
+.brs .addr{color:var(--phu);margin-top:10px;line-height:1.55}
+.tels{display:grid;gap:8px;margin-top:18px}
+.tels a{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--ke);border-radius:3px;text-decoration:none;font-weight:600;color:var(--xanh-sau);transition:border-color .2s,background .2s}
+.tels a:hover{border-color:var(--xanh);background:var(--xanh-nhat)}
+.tels svg{color:var(--gach)}
+.brs .link{margin-top:auto;padding-top:18px;font-size:15px}
+.hint{margin-top:30px;color:var(--phu)}
+.hint a{font-weight:600;text-decoration:none}
+
+@media (max-width:1080px){
+  .park{grid-template-columns:1fr}
+  .park>img{min-height:0;aspect-ratio:16/8}
+  .brs{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .park-tx{padding:24px 22px 26px}
+  .park h3{font-size:22px}
+  .park dl div{grid-template-columns:1fr;gap:2px}
+  .brs{grid-template-columns:1fr}
+  .brs article{padding:24px 22px}
+}

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phương án C · Di sản</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--bg:#0D1311;--bg2:#141C19;--card:#18221E;--gold:#C9A55C;--gold-2:#E2C88E;--txt:#ECE6D8;--muted:#9C9788;--line:rgba(201,165,92,.25);--serif:"Playfair Display",Georgia,serif;--sans:"Be Vietnam Pro",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.75}
+img{display:block;width:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.photo{filter:saturate(.82) contrast(1.04) brightness(.9)}
+
+.topbar{background:#080c0b;font-size:13px;color:var(--muted);text-align:center;padding:8px 16px;letter-spacing:.06em}
+.topbar b{color:var(--gold)}
+header{position:sticky;top:0;z-index:20;background:rgba(13,19,17,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:#fff}
+.brand b{font-family:var(--serif);font-size:20px;font-weight:500;display:block;line-height:1.1}
+.brand small{font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+nav{display:flex;gap:30px;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:.3s;border:1px solid var(--gold);cursor:pointer;font-family:var(--sans)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#1a140a;border:0}
+.btn-gold:hover{filter:brightness(1.08)}
+.btn-line{color:var(--gold);background:transparent}.btn-line:hover{background:rgba(201,165,92,.1)}
+
+.hero{position:relative;min-height:calc(100vh - 112px);display:flex;align-items:center;overflow:hidden}
+.hero>img{position:absolute;inset:0;height:100%;transform:scale(1.06);animation:slow 22s ease-out forwards}
+@keyframes slow{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(13,19,17,.72),rgba(13,19,17,.5) 45%,rgba(13,19,17,.9) 80%),linear-gradient(0deg,var(--bg),transparent 30%)}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.orn{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold)}
+.orn::before,.orn::after{content:"";width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn::after{transform:scaleX(-1)}
+.orn svg{width:34px;height:34px}
+.hero .kicker{font-size:13px;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;margin:22px 0 10px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(42px,6.5vw,88px);line-height:1.08}
+.hero h1 em{color:var(--gold-2)}
+.hero p{max-width:620px;margin:24px auto 38px;color:#cfc8b8;font-size:18px}
+.hero .actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.stats div{padding:34px 20px;text-align:center}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{font-family:var(--serif);font-size:26px;color:var(--gold-2);font-weight:500;display:block}
+.stats small{font-size:13px;color:var(--muted);letter-spacing:.06em}
+
+section.s{padding:130px 0}
+.head{text-align:center;max-width:720px;margin:0 auto 64px}
+.head .kicker{font-size:12px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4vw,52px);line-height:1.2;margin:14px 0 18px}
+.head p{color:var(--muted)}
+
+.landmarks{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:300px 300px;gap:16px}
+.lm{position:relative;overflow:hidden;border:1px solid var(--line)}
+.lm:first-child{grid-row:1/3}
+.lm img{height:100%;transition:transform 1s}
+.lm:hover img{transform:scale(1.06)}
+.lm div{position:absolute;inset:auto 0 0;padding:26px;background:linear-gradient(0deg,rgba(8,12,11,.92),transparent)}
+.lm small{font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.lm h3{font-family:var(--serif);font-weight:500;font-size:26px}
+.lm:first-child h3{font-size:36px}
+
+.collection{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.prod{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.pc{background:var(--card);border:1px solid var(--line);transition:.35s}
+.pc:hover{border-color:var(--gold);transform:translateY(-6px)}
+.pc img{aspect-ratio:1/1}
+.pc div{padding:24px}
+.pc small{font-size:11px;letter-spacing:.3em;color:var(--gold)}
+.pc h3{font-family:var(--serif);font-weight:500;font-size:24px;margin:6px 0 10px}
+.pc p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.pc a{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
+
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}
+.feature .img{position:relative}
+.feature .img img{aspect-ratio:5/4}
+.feature .img::after{content:"";position:absolute;inset:18px;border:1px solid var(--gold-2);pointer-events:none;opacity:.6}
+.checks{list-style:none;margin-top:30px}
+.checks li{padding:14px 0 14px 34px;border-bottom:1px solid var(--line);position:relative}
+.checks li::before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:11px;top:19px}
+
+.ceremony{position:relative;padding:180px 0;text-align:center;overflow:hidden}
+.ceremony>img{position:absolute;inset:0;height:100%}
+.ceremony::after{content:"";position:absolute;inset:0;background:rgba(10,14,13,.66)}
+.ceremony .wrap{position:relative;z-index:2}
+.ceremony .dates{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:36px 0}
+.ceremony .dates span{border:1px solid var(--line);padding:12px 22px;background:rgba(13,19,17,.6);font-size:14px}
+.ceremony .dates b{color:var(--gold-2);font-weight:500}
+
+.consult{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+.consult .l{padding:64px;background:var(--bg2)}
+.consult .r{padding:64px}
+.consult form{display:grid;gap:16px}
+.consult input,.consult select,.consult textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--txt);font:inherit;padding:12px 2px;font-size:15px}
+.consult input:focus,.consult select:focus,.consult textarea:focus{outline:none;border-color:var(--gold)}
+.consult option{color:#222}
+.tel{font-family:var(--serif);font-size:40px;color:var(--gold-2);display:block;margin:10px 0 24px}
+
+footer{border-top:1px solid var(--line);padding:50px 0 110px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.mbar{display:none}
+
+.rv{opacity:0;transform:translateY(24px);transition:1s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero>img{animation:none;transform:none}}
+
+@media (max-width:960px){
+  .wrap{padding:0 16px}
+  nav,header .btn{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats div:nth-child(3){border-left:0}
+  .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+  .landmarks{grid-template-columns:1fr;grid-template-rows:auto}
+  .lm,.lm:first-child{grid-row:auto;height:280px}
+  .prod{grid-template-columns:1fr 1fr}
+  .feature,.consult{grid-template-columns:1fr;gap:40px}
+  .consult .l,.consult .r{padding:36px 20px}
+  section.s{padding:84px 0}
+  .ceremony{padding:110px 0}
+  .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;inset:auto 0 0;z-index:30;background:#080c0b;border-top:1px solid var(--gold);text-align:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .mbar a{padding:15px 4px;color:var(--gold-2)}.mbar a+a{border-left:1px solid var(--line)}
+}
+@media (max-width:520px){.prod{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Hỗ trợ tang lễ 24/7 · Hotline <b>0818 555 444</b></div>
+<header><div class="wrap">
+  <a class="brand" href="#"><img src="../assets/img/cpha-logo.png" alt="Logo CPHA"><span><b>Hoa Viên Bình Dương</b><small>Di sản an nghỉ</small></span></a>
+  <nav><a href="#cong-trinh">Công trình</a><a href="#bo-suu-tap">Phần mộ</a><a href="#dich-vu">Dịch vụ</a><a href="#dai-le">Đại lễ</a></nav>
+  <a class="btn btn-line" href="#tu-van">Tư vấn riêng</a>
+</div></header>
+
+<section class="hero">
+  <img class="photo" src="../assets/img/linh-hoa-night.jpg" alt="Linh Hoa Tuệ Đàn về đêm">
+  <div class="wrap">
+    <div class="orn"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M17 4c4.5 6 4.5 13 0 22-4.5-9-4.5-16 0-22Z"/><path d="M17 26c-5-4-10-6-15-6 2.5 4 7.5 6 15 6Zm0 0c5-4 10-6 15-6-2.5 4-7.5 6-15 6Z"/><path d="M17 26c-3-5-7-9-11-11 1 5 5 9 11 11Zm0 0c3-5 7-9 11-11-1 5-5 9-11 11Z"/></svg></div>
+    <div class="kicker">Hoa Viên Nghĩa Trang Bình Dương</div>
+    <h1>Kiến tạo <em>di sản</em><br>cho muôn đời sau</h1>
+    <p>Những công trình tâm linh đậm hồn Việt, phần mộ trang nghiêm giữa rừng xanh, để gia đình lưu giữ cội nguồn qua nhiều thế hệ.</p>
+    <div class="actions"><a class="btn btn-gold" href="#tu-van">Đặt lịch tham quan riêng</a><a class="btn btn-line" href="#cong-trinh">Khám phá hoa viên</a></div>
+  </div>
+</section>
+
+<div class="stats">
+  <div><b>CPHA</b><small>Chủ đầu tư</small></div>
+  <div><b>Pháp lý</b><small>Đầy đủ</small></div>
+  <div><b>Đa tín ngưỡng</b><small>Phật giáo · Công giáo</small></div>
+  <div><b>24/7</b><small>Hỗ trợ tang lễ</small></div>
+</div>
+
+<section class="s" id="cong-trinh">
+  <div class="wrap">
+    <div class="head rv"><div class="kicker">Công trình biểu tượng</div><h2>Hồn Việt trong từng công trình</h2><p>Những điểm nhấn kiến trúc tâm linh làm nên bản sắc riêng của hoa viên.</p></div>
+    <div class="landmarks">
+      <div class="lm rv"><img class="photo" src="../assets/img/linh-hoa.jpg" alt=""><div><small>Biểu tượng</small><h3>Linh Hoa Tuệ Đàn</h3></div></div>
+      <div class="lm rv"><img class="photo" src="../assets/img/lotus.jpg" alt=""><div><small>Đài sen</small><h3>Vĩnh Hằng Đài</h3></div></div>
+      <div class="lm rv"><img class="photo" src="../assets/img/hon-viet.jpg" alt=""><div><small>Tượng đài</small><h3>Hồn Việt</h3></div></div>
+      <div class="lm rv"><img class="photo" src="../assets/img/tp-blossom.jpg" alt=""><div><small>Chùa</small><h3>Thiên Phước Tự</h3></div></div>
+      <div class="lm rv"><img class="photo" src="../assets/img/vinh-hoa-mon.jpg" alt=""><div><small>Cổng chính</small><h3>Vĩnh Hằng Môn</h3></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="s collection" id="bo-suu-tap">
+  <div class="wrap">
+    <div class="head rv"><div class="kicker">Bộ sưu tập</div><h2>Phần mộ cho từng gia đình</h2><p>Mỗi vị trí đều được chọn theo phong thủy, cảnh quan và mong muốn riêng của gia đình.</p></div>
+    <div class="prod">
+      <div class="pc rv"><img class="photo" src="../assets/img/song-than.jpg" alt=""><div><small>I</small><h3>Mộ song thân</h3><p>Trọn vẹn nghĩa tình cho cha mẹ, ông bà.</p><a href="#tu-van">Nhận báo giá</a></div></div>
+      <div class="pc rv"><img class="photo" src="../assets/img/long-phung.jpg" alt=""><div><small>II</small><h3>Khu Long Phụng</h3><p>Thảm cỏ khoáng đạt, bố cục trang nghiêm.</p><a href="#tu-van">Nhận báo giá</a></div></div>
+      <div class="pc rv"><img class="photo" src="../assets/img/pavilion.jpg" alt=""><div><small>III</small><h3>Lăng mộ gia tộc</h3><p>Khuôn viên riêng, nhà bia, kiến trúc truyền thống.</p><a href="#tu-van">Nhận báo giá</a></div></div>
+      <div class="pc rv"><img class="photo" src="../assets/img/columbarium-hall.jpg" alt=""><div><small>IV</small><h3>Lưu tro cốt</h3><p>Trang nghiêm, hương khói sớm hôm.</p><a href="#tu-van">Nhận báo giá</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="dich-vu">
+  <div class="wrap feature">
+    <div class="img rv"><img class="photo" src="../assets/img/funeral.jpg" alt="Nghi thức tang lễ"></div>
+    <div class="rv">
+      <div class="kicker" style="font-size:12px;letter-spacing:.4em;color:var(--gold)">DỊCH VỤ TRỌN GÓI</div>
+      <h2>Tiễn đưa trọn nghĩa, chu toàn từng nghi lễ</h2>
+      <p style="color:var(--muted)">Một đầu mối duy nhất lo liệu mọi việc, để gia đình yên tâm dành thời gian cho người thân.</p>
+      <ul class="checks">
+        <li>Tổ chức tang lễ theo phong tục và tôn giáo</li>
+        <li>Hỏa táng, cải táng, di dời mộ phần</li>
+        <li>Thiết kế, thi công lăng mộ theo phong thủy</li>
+        <li>Chăm sóc mộ phần, thắp hương ngày giỗ</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="ceremony" id="dai-le">
+  <img class="photo" src="../assets/img/cau-sieu.jpg" alt="">
+  <div class="wrap rv">
+    <div class="orn"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M17 4c4.5 6 4.5 13 0 22-4.5-9-4.5-16 0-22Z"/><path d="M17 26c-5-4-10-6-15-6 2.5 4 7.5 6 15 6Zm0 0c5-4 10-6 15-6-2.5 4-7.5 6-15 6Z"/></svg></div>
+    <h2>Đại lễ trong năm</h2>
+    <p style="color:#cfc8b8;max-width:560px;margin:0 auto">Hoa viên tổ chức các đại lễ cầu siêu, cầu an, mời gia đình cùng về tưởng niệm.</p>
+    <div class="dates"><span><b>Thanh minh</b> · Tháng 3 âm lịch</span><span><b>Vu Lan</b> · Rằm tháng 7</span><span><b>Cầu siêu – cầu an</b> · Hằng năm</span></div>
+    <a class="btn btn-line" href="#">Xem lịch lễ</a>
+  </div>
+</section>
+
+<section class="s" id="tu-van">
+  <div class="wrap consult rv">
+    <div class="l">
+      <div class="kicker" style="font-size:12px;letter-spacing:.4em;color:var(--gold)">TƯ VẤN RIÊNG</div>
+      <h2>Một buổi tham quan dành riêng cho gia đình</h2>
+      <p style="color:var(--muted)">Xe đưa đón tận nơi, tư vấn viên đồng hành và giải đáp mọi thắc mắc về pháp lý, phong thủy.</p>
+      <span class="tel">0818 555 444</span>
+    </div>
+    <div class="r">
+      <form onsubmit="event.preventDefault();this.innerHTML='<p>Cảm ơn quý khách. Chúng tôi sẽ liên hệ sớm.</p>'">
+        <input placeholder="Họ và tên" required>
+        <input placeholder="Số điện thoại" type="tel" required>
+        <select><option>Quan tâm: Mộ song thân</option><option>Khu Long Phụng</option><option>Lăng mộ gia tộc</option><option>Lưu tro cốt</option><option>Dịch vụ tang lễ</option></select>
+        <textarea rows="3" placeholder="Lời nhắn (không bắt buộc)"></textarea>
+        <button class="btn btn-gold" style="justify-content:center;margin-top:10px">Gửi yêu cầu</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Hoa Viên Nghĩa Trang Bình Dương · Công ty CP Đầu tư Xây dựng Chánh Phú Hòa</span><span>cphaco.vn</span></div></footer>
+<div class="mbar"><a href="tel:0818555444">Gọi 24/7</a><a href="#">Zalo</a><a href="#tu-van">Tư vấn</a></div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

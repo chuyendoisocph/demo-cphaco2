@@ -1,0 +1,51 @@
+/* cột nhóm câu hỏi + danh sách */
+.faq{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start}
+.fnav{position:sticky;top:80px;display:grid;gap:22px}
+.fsearch{display:flex;align-items:center;gap:10px;padding:0 14px;border:1px solid #858F9A;border-radius:3px;background:#fff;color:var(--nhat)}
+.fsearch:focus-within{border-color:var(--xanh);box-shadow:0 0 0 3px var(--xanh-nhat)}
+.fsearch input{flex:1;min-width:0;border:0;padding:13px 0;font:inherit;font-size:16px;color:var(--chu);background:none;outline:none}
+.fnav nav{display:grid;border-top:1px solid var(--ke)}
+.fnav nav a{display:flex;justify-content:space-between;gap:12px;padding:13px 2px;border-bottom:1px solid var(--ke);text-decoration:none;color:var(--xanh-sau);font-weight:500;font-size:15.5px;line-height:1.4}
+.fnav nav a:hover,.fnav nav a.on{color:var(--gach)}
+.fnav nav span{color:var(--nhat);font-size:14px}
+.fcall{background:var(--gach);color:#f6dcd1;padding:20px 22px;font-size:14px}
+.fcall a{display:block;color:#fff;font-size:24px;font-weight:700;letter-spacing:.02em;text-decoration:none;line-height:1.3}
+
+.fgroup+.fgroup{margin-top:52px}
+.fgroup{scroll-margin-top:80px}
+.fgroup h2{font-size:clamp(22px,2vw,26px);color:var(--xanh-sau);padding-bottom:14px;border-bottom:2px solid var(--xanh-sau)}
+.flist details{border-bottom:1px solid var(--ke)}
+.flist summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 24px;gap:16px;align-items:baseline;padding:20px 0;font-weight:600;font-size:17.5px;color:var(--chu);line-height:1.45}
+.flist summary::-webkit-details-marker{display:none}
+.flist summary::after{content:"+";font-size:24px;font-weight:400;color:var(--gach);text-align:right;line-height:1}
+.flist details[open] summary::after{content:"–"}
+.flist summary:hover{color:var(--xanh)}
+.ans{padding:0 40px 22px 0;color:var(--phu)}
+.ans p+p{margin-top:10px}
+.ans a{font-weight:600}
+.fempty{padding:20px 22px;background:var(--nen);color:var(--phu)}
+mark{background:#fbe3d6;color:inherit;padding:0 1px}
+
+/* dải hỏi thêm */
+.ask-band{background:var(--xanh-sau);color:#c8d6e6;padding:56px 0}
+.ask-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.ask-band h2{color:#fff;font-size:clamp(22px,2.2vw,28px)}
+.ask-band p{margin-top:6px}
+.ask-band .acts{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.ask-band .tel{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-size:24px;font-weight:700;letter-spacing:.02em}
+
+@media (max-width:1080px){
+  .faq{grid-template-columns:1fr;gap:36px}
+  .fnav{position:static;grid-template-columns:1fr 1fr;align-items:start}
+  .fsearch{grid-column:1/-1}
+}
+@media (max-width:760px){
+  .fnav{grid-template-columns:1fr}
+  .fnav nav{display:flex;overflow-x:auto;gap:8px;border:0;scrollbar-width:none}
+  .fnav nav::-webkit-scrollbar{display:none}
+  .fnav nav a{flex:none;border:1px solid var(--ke);border-radius:30px;padding:8px 14px;font-size:14.5px}
+  .fcall{display:none}
+  .flist summary{font-size:16.5px;padding:17px 0}
+  .ans{padding-right:0}
+  .ask-band{padding:44px 0}
+}

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoa Viên Nghĩa Trang Bình Dương</title>
+<meta name="description" content="Hoa Viên Nghĩa Trang Bình Dương – Công ty CP Đầu tư Xây dựng Chánh Phú Hòa. Khu mộ, lưu tro cốt, dịch vụ tang lễ trọn gói. Tổng đài 0818 555 444.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--xanh:#17599E;--xanh-dam:#0F4277;--gach:#A24A2B;--gach-nhat:#F6ECE6;--chu:#1E2328;--phu:#5A6168;--ke:#E1E4E8;--nen:#F4F6F8;--font:"Be Vietnam Pro",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--chu);font-size:17px;line-height:1.65;background:#fff}
+::selection{background:#cfe0f3}
+:focus-visible{outline:3px solid #8fb6e0;outline-offset:2px}
+a{color:var(--xanh)}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+.top{background:var(--xanh-dam);color:#d5e2f0;font-size:14.5px}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:7px;padding-bottom:7px}
+.top a{color:#fff;font-weight:600;text-decoration:none}
+.brandbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--chu)}
+.logo img{width:64px;height:64px}
+.logo b{display:block;font-size:21px;font-weight:700;color:var(--gach);text-transform:uppercase;letter-spacing:.01em;line-height:1.2}
+.logo span{font-size:14.5px;color:var(--xanh);font-weight:500}
+.hot{display:flex;gap:24px}
+.hot a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--chu)}
+.hot i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--gach-nhat);color:var(--gach)}
+.hot small{display:block;font-size:13px;color:var(--phu)}
+.hot b{font-size:19px;color:var(--gach)}
+.hot .t2 i{background:#e7f0fa;color:var(--xanh)}
+.hot .t2 b{color:var(--xanh)}
+nav.main{background:var(--xanh);position:sticky;top:0;z-index:30}
+nav.main ul{display:flex;list-style:none}
+nav.main li{position:relative}
+nav.main>.wrap>ul>li>a{display:block;padding:13px 16px;color:#fff;text-decoration:none;font-weight:500;font-size:15.5px}
+nav.main>.wrap>ul>li>a:hover,nav.main li.on>a{background:var(--xanh-dam)}
+nav.main .sub{display:none;position:absolute;top:100%;left:0;min-width:250px;background:#fff;border:1px solid var(--ke);border-top:3px solid var(--gach);box-shadow:0 10px 24px rgba(15,40,70,.12);list-style:none;flex-direction:column}
+nav.main li:hover>.sub,nav.main li:focus-within>.sub{display:flex}
+nav.main .sub a{display:block;padding:10px 16px;color:var(--chu);text-decoration:none;font-size:15px;border-bottom:1px solid #f0f2f4}
+nav.main .sub a:hover{background:var(--nen);color:var(--xanh)}
+.menu-btn{display:none}
+
+.banner{position:relative;background:#111}
+.slides{position:relative;height:clamp(320px,46vw,560px);overflow:hidden}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s}
+.slides img.on{opacity:1}
+.capbar{border-bottom:1px solid var(--ke)}
+.capbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+.capbar p{font-size:15.5px;color:var(--phu)}
+.capbar p b{color:var(--chu)}
+.dots{display:flex;gap:6px;flex:none}
+.dots button{width:30px;height:5px;border:0;background:#cdd3d9;cursor:pointer;padding:0}
+.dots button.on{background:var(--gach)}
+
+.quick{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border:1px solid var(--ke)}
+.quick a{display:flex;gap:14px;padding:20px;text-decoration:none;color:var(--chu);border-right:1px solid var(--ke);transition:background .25s}
+.quick a:last-child{border-right:0}
+.quick a:hover{background:var(--nen)}
+.quick svg{flex:none;color:var(--gach)}
+.quick b{display:block;font-size:17px;color:var(--xanh-dam)}
+.quick span{display:block;font-size:14.5px;color:var(--phu);line-height:1.45;margin-top:2px}
+.quick a.urgent{background:var(--gach);color:#fff}
+.quick a.urgent b,.quick a.urgent span,.quick a.urgent svg{color:#fff}
+.quick a.urgent:hover{background:#8a3d22}
+
+.sec{padding:60px 0}
+.alt{background:var(--nen)}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:22px;padding-bottom:10px;border-bottom:2px solid var(--ke);position:relative}
+.head::after{content:"";position:absolute;left:0;bottom:-2px;width:90px;height:2px;background:var(--gach)}
+.head h2{font-size:25px;font-weight:700;color:var(--xanh-dam)}
+.head a{font-size:15px;font-weight:500;white-space:nowrap;text-decoration:none}
+.head a:hover{text-decoration:underline}
+
+.intro{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
+.intro p+p{margin-top:12px}
+.facts{display:grid;grid-template-columns:1fr 1fr;margin-top:22px;border-top:1px solid var(--ke);border-left:1px solid var(--ke)}
+.facts div{padding:12px 14px;border-right:1px solid var(--ke);border-bottom:1px solid var(--ke)}
+.facts small{display:block;font-size:13.5px;color:var(--phu)}
+.facts b{font-size:17px}
+.intro figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.intro figcaption{font-size:14px;color:var(--phu);margin-top:8px}
+
+.zones{width:100%;border-collapse:collapse;background:#fff;font-size:16px}
+.zones th{background:var(--xanh);color:#fff;text-align:left;font-weight:600;font-size:14.5px;padding:11px 12px}
+.zones td{border-bottom:1px solid var(--ke);padding:12px;vertical-align:middle}
+.zones tr:hover td{background:#fbfcfd}
+.zones img{width:112px;height:76px;object-fit:cover}
+.zones .n a{font-weight:600;font-size:17px;color:var(--chu);text-decoration:none}
+.zones .n a:hover{color:var(--xanh)}
+.zones .n small{display:block;color:var(--gach);font-weight:500;font-size:14px}
+.zones .num{font-weight:600;white-space:nowrap}
+.zones .btn-sm{display:inline-block;padding:7px 12px;border:1px solid var(--xanh);color:var(--xanh);font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
+.zones .btn-sm:hover{background:var(--xanh);color:#fff}
+.tablewrap{overflow-x:auto;border:1px solid var(--ke)}
+.note{font-size:15px;color:var(--phu);margin-top:12px}
+
+.svc{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px}
+.svc a{position:relative;display:block;color:#fff;text-decoration:none;overflow:hidden;background:#222}
+.svc img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .6s}
+.svc a:first-child img{aspect-ratio:auto;min-height:100%}
+.svc a:first-child{grid-row:span 2}
+.svc a:hover img{transform:scale(1.04)}
+.svc div{position:absolute;inset:auto 0 0;padding:16px 18px;background:rgba(10,30,55,.82)}
+.svc b{font-size:19px;display:block}
+.svc span{font-size:14.5px;color:#d5e2f0}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.ev{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:13px 0;border-bottom:1px dashed var(--ke)}
+.ev .d{background:#fff;border:1px solid var(--ke);text-align:center;padding:8px 4px;line-height:1.25;align-self:start}
+.ev .d b{display:block;color:var(--gach);font-size:15px}
+.ev .d span{font-size:12.5px;color:var(--phu)}
+.ev a{font-weight:600;color:var(--chu);text-decoration:none}
+.ev a:hover{color:var(--xanh)}
+.ev p{font-size:15px;color:var(--phu);margin-top:2px}
+.post{display:grid;grid-template-columns:128px 1fr;gap:14px;padding:13px 0;border-bottom:1px dashed var(--ke)}
+.post img{width:128px;height:84px;object-fit:cover}
+.post a{font-weight:600;color:var(--chu);text-decoration:none;line-height:1.4;display:block}
+.post a:hover{color:var(--xanh)}
+.post span{font-size:13.5px;color:var(--phu)}
+
+.cta{background:var(--xanh-dam);color:#fff}
+.cta .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;padding-top:44px;padding-bottom:44px}
+.cta h2{font-size:26px;line-height:1.3}
+.cta p{color:#c9d8e8;margin-top:8px}
+.cta form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cta input,.cta select{width:100%;padding:12px;border:0;font:inherit;font-size:16px;border-radius:2px}
+.cta .full{grid-column:1/-1}
+.cta button{padding:13px;border:0;background:var(--gach);color:#fff;font:inherit;font-weight:600;font-size:16.5px;cursor:pointer;border-radius:2px}
+.cta button:hover{background:#8a3d22}
+.ok{grid-column:1/-1;background:#fff;color:var(--chu);padding:14px;border-radius:2px}
+
+footer{background:#16202B;color:#b9c4cf;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding:46px 20px 30px}
+footer h4{color:#fff;font-size:15.5px;margin-bottom:10px}
+footer a{color:#e5ecf3}
+footer p+p{margin-top:6px}
+footer .copy{border-top:1px solid #2a3643;padding:14px 20px;font-size:13.5px;color:#8696a6}
+.callbar{display:none}
+
+@media (max-width:1000px){
+  .hot .t2{display:none}
+  .quick{grid-template-columns:1fr 1fr}
+  .quick a:nth-child(2){border-right:0}
+  .quick a:nth-child(-n+2){border-bottom:1px solid var(--ke)}
+  .intro,.two,.cta .wrap{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr 1fr}
+  .svc a:first-child{grid-column:1/-1;grid-row:auto}
+  .svc a:first-child img{aspect-ratio:16/9}
+  footer .cols{grid-template-columns:1fr 1fr}
+  nav.main ul{flex-wrap:wrap}
+}
+@media (max-width:760px){
+  .hot,.top .addr{display:none}
+  .menu-btn{display:flex;align-items:center;gap:8px;white-space:nowrap;flex:none;background:none;border:1px solid var(--ke);padding:8px 12px;font:inherit;font-weight:600;color:var(--xanh)}
+  nav.main{display:none;position:static}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column}
+  nav.main .sub{display:flex;position:static;border:0;box-shadow:none;background:transparent;padding-left:16px}
+  nav.main .sub a{color:#dbe7f4;border:0;padding:6px 16px}
+  .logo img{width:50px;height:50px}
+  .logo b{font-size:15px}
+  .logo span{font-size:13px}
+  .capbar .wrap{align-items:flex-start}
+  .quick{grid-template-columns:1fr;margin-left:0;margin-right:0}
+  .quick a{border-right:0;border-bottom:1px solid var(--ke)}
+  .zones td:first-child,.zones th:first-child,.zones td:last-child,.zones th:last-child{display:none}
+  .svc{grid-template-columns:1fr}
+  .cta form{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+  body{padding-bottom:54px}
+  .callbar{display:grid;grid-template-columns:1.3fr 1fr;position:fixed;inset:auto 0 0;z-index:40}
+  .callbar a{padding:15px 6px;text-align:center;color:#fff;font-weight:600;text-decoration:none;background:var(--gach)}
+  .callbar a+a{background:var(--xanh)}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span class="addr">Khu phố Bông Trang, phường Chánh Phú Hòa, TP. Hồ Chí Minh · 7h30 – 17h00 tất cả các ngày</span><span>Tổng đài: <a href="tel:0818555444">0818 555 444</a></span></div></div>
+<div class="brandbar"><div class="wrap">
+  <a class="logo" href="#"><img src="assets/img/cpha-logo.png" alt="Logo CPHA"><span><b>Hoa Viên Nghĩa Trang Bình Dương</b><span>Công ty CP Đầu tư Xây dựng Chánh Phú Hòa</span></span></a>
+  <div class="hot">
+    <a href="tel:0818555444"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg></i><span><small>Hỗ trợ tang lễ, tư vấn</small><b>0818 555 444</b></span></a>
+    <a class="t2" href="#dang-ky"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></i><span><small>Có xe đưa đón</small><b>Đặt lịch tham quan</b></span></a>
+  </div>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Danh mục</button>
+</div></div>
+<nav class="main" id="nav"><div class="wrap"><ul>
+  <li class="on"><a href="#">Trang chủ</a></li>
+  <li><a href="#gioi-thieu">Giới thiệu</a><ul class="sub"><li><a href="#gioi-thieu">Về Hoa Viên</a></li><li><a href="#gioi-thieu">Quy hoạch & bản đồ</a></li><li><a href="#lien-he">Hệ thống chi nhánh</a></li></ul></li>
+  <li><a href="#khu-mo">Khu mộ</a><ul class="sub"><li><a href="#khu-mo">Long Phụng Minh Đồ</a></li><li><a href="#khu-mo">Đại Lộ Vĩnh Hằng</a></li><li><a href="#khu-mo">Linh Hoa Tuệ Đàn</a></li><li><a href="#khu-mo">Song Thân</a></li><li><a href="#khu-mo">Trúc Lâm Bích Thủy</a></li></ul></li>
+  <li><a href="#dich-vu">Dịch vụ</a><ul class="sub"><li><a href="#dich-vu">Tang lễ trọn gói</a></li><li><a href="#dich-vu">Lưu tro cốt</a></li><li><a href="#dich-vu">Xây mộ & chăm sóc mộ</a></li></ul></li>
+  <li><a href="#su-kien">Sự kiện</a></li>
+  <li><a href="#su-kien">Bài viết</a></li>
+  <li><a href="#">Tham quan 360°</a></li>
+  <li><a href="#">Hỏi đáp</a></li>
+  <li><a href="#lien-he">Liên hệ</a></li>
+</ul></div></nav>
+
+<div class="banner">
+  <div class="slides" id="slides">
+    <img class="on" src="assets/img/linh-hoa.jpg" alt="Linh Hoa Tuệ Đàn nhìn từ trên cao" data-cap="<b>Linh Hoa Tuệ Đàn</b> – nơi tổ chức các đại lễ tâm linh hằng năm">
+    <img src="assets/img/lotus.jpg" alt="Vĩnh Hằng Đài" data-cap="<b>Vĩnh Hằng Đài</b> – đài sen trên trục Đại Lộ Vĩnh Hằng">
+    <img src="assets/img/forest-aerial.jpg" alt="Các khu mộ giữa rừng" data-cap="<b>Các khu mộ giữa rừng cây</b> – quy hoạch trên 300 ha">
+    <img src="assets/img/cau-sieu.jpg" alt="Lễ cầu siêu cầu an" data-cap="<b>Lễ Cầu Siêu – Cầu An</b> tiết Thanh Minh">
+  </div>
+</div>
+<div class="capbar"><div class="wrap"><p id="cap"><b>Linh Hoa Tuệ Đàn</b> – nơi tổ chức các đại lễ tâm linh hằng năm</p><div class="dots" id="dots"></div></div></div>
+
+<main>
+<div class="wrap">
+  <div class="quick">
+    <a class="urgent" href="tel:0818555444"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg><div><b>Cần lo tang lễ ngay</b><span>Gọi 0818 555 444 để được tiếp nhận và hướng dẫn</span></div></a>
+    <a href="#khu-mo"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg><div><b>Khu mộ & báo giá</b><span>Diện tích, vị trí, đặc điểm từng khu</span></div></a>
+    <a href="#dang-ky"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><div><b>Đặt lịch tham quan</b><span>Xem đất thực tế, có xe đưa đón</span></div></a>
+    <a href="#"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><div><b>Tìm vị trí mộ</b><span>Gọi tổng đài với họ tên, năm mất</span></div></a>
+  </div>
+</div>
+
+<section class="sec" id="gioi-thieu"><div class="wrap intro">
+  <div>
+    <div class="head"><h2>Giới thiệu Hoa Viên</h2><a href="#">Xem thêm</a></div>
+    <p>Hoa Viên Bình Dương là công viên nghĩa trang hiện đại tại phường Chánh Phú Hòa, TP. Hồ Chí Minh. Cảnh quan xanh được quy hoạch bài bản cùng hệ thống công trình tâm linh tạo nên chốn an nghỉ trang nghiêm cho người đã khuất và nơi tưởng niệm để con cháu tìm về.</p>
+    <p>Hoa Viên do Công ty CP Đầu tư Xây dựng Chánh Phú Hòa (CPHA) đầu tư và vận hành, cung cấp đất mộ, lưu tro cốt, xây dựng mộ và dịch vụ tang lễ trọn gói.</p>
+    <div class="facts">
+      <div><small>Quy mô quy hoạch</small><b>300 ha</b></div>
+      <div><small>Phát triển từ</small><b>Năm 2006</b></div>
+      <div><small>Giờ mở cửa</small><b>7h30 – 17h00 hằng ngày</b></div>
+      <div><small>Chi nhánh tại TP. HCM</small><b>3 văn phòng</b></div>
+    </div>
+  </div>
+  <figure><img src="assets/img/spirit-hill.jpg" alt="Đồi tâm linh nhìn từ trên cao"><figcaption>Đồi tâm linh và các khu mộ giữa rừng cây.</figcaption></figure>
+</div></section>
+
+<section class="sec alt" id="khu-mo"><div class="wrap">
+  <div class="head"><h2>Các khu mộ</h2><a href="#">Chi tiết từng khu</a></div>
+  <div class="tablewrap"><table class="zones">
+    <thead><tr><th>Hình ảnh</th><th>Khu</th><th>Diện tích tiêu chuẩn</th><th>Đường chính</th><th>Đặc điểm</th><th></th></tr></thead>
+    <tbody>
+      <tr><td><img src="assets/img/long-phung.jpg" alt=""></td><td class="n"><a href="#">Long Phụng Minh Đồ</a><small>Gói tiêu chuẩn</small></td><td class="num">5,735 m²/mộ</td><td>Minh Đạo – Minh Lộc</td><td>Mộ đơn, đôi; gần Chùa Thiên Phước</td><td><a class="btn-sm" href="#dang-ky">Nhận báo giá</a></td></tr>
+      <tr><td><img src="assets/img/avenue.jpg" alt=""></td><td class="n"><a href="#">Đại Lộ Vĩnh Hằng</a><small>Gói trang trọng</small></td><td class="num">11,63 m²/mộ</td><td>Đại Lộ Vĩnh Hằng</td><td>Gần cổng chính và các công trình tâm linh</td><td><a class="btn-sm" href="#dang-ky">Nhận báo giá</a></td></tr>
+      <tr><td><img src="assets/img/linh-hoa.jpg" alt=""></td><td class="n"><a href="#">Linh Hoa Tuệ Đàn</a><small>Gói cao cấp</small></td><td class="num">10,87 m²/mộ</td><td>Đại Lộ Vĩnh Hằng</td><td>Chọn hướng huyệt theo phong thủy</td><td><a class="btn-sm" href="#dang-ky">Nhận báo giá</a></td></tr>
+      <tr><td><img src="assets/img/song-than.jpg" alt=""></td><td class="n"><a href="#">Song Thân</a><small>Gói cao cấp</small></td><td class="num">66 m²</td><td>Minh Nghĩa (6 m)</td><td>Nhà thờ họ tộc, lưu cốt nhiều thế hệ</td><td><a class="btn-sm" href="#dang-ky">Nhận báo giá</a></td></tr>
+      <tr><td><img src="assets/img/truc-lam.jpg" alt=""></td><td class="n"><a href="#">Trúc Lâm Bích Thủy</a><small>Khu gia tộc</small></td><td class="num">64 – 81 m²</td><td>Thiên Thai</td><td>Tối đa 10 mộ; nền cao, gần rừng tre</td><td><a class="btn-sm" href="#dang-ky">Nhận báo giá</a></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Quyền sử dụng 50 năm hoặc vĩnh viễn tùy sản phẩm. Giá theo từng vị trí; nhân viên gửi báo giá và danh sách vị trí còn trống khi gia đình liên hệ.</p>
+</div></section>
+
+<section class="sec" id="dich-vu"><div class="wrap">
+  <div class="head"><h2>Dịch vụ</h2><a href="#">Tất cả dịch vụ</a></div>
+  <div class="svc">
+    <a href="#"><img src="assets/img/funeral.jpg" alt="Nghi thức tang lễ"><div><b>Tang lễ trọn gói</b><span>Khâm liệm, nhập quan, lễ viếng, di quan do một đầu mối điều phối</span></div></a>
+    <a href="#"><img src="assets/img/tp-courtyard.jpg" alt="Chùa Thiên Phước"><div><b>Lưu tro cốt</b><span>Tại Chùa Thiên Phước trong khuôn viên</span></div></a>
+    <a href="#"><img src="assets/img/pavilion.jpg" alt="Mộ gia tộc"><div><b>Xây mộ & bia mộ</b><span>Do đội thợ của Hoa Viên thực hiện</span></div></a>
+    <a href="#"><img src="assets/img/care-team.jpg" alt="Đội chăm sóc"><div><b>Chăm sóc mộ phần</b><span>Bồi đất, trồng cỏ, giữ cảnh quan</span></div></a>
+    <a href="#"><img src="assets/img/bus.jpg" alt="Xe đưa đón"><div><b>Xe đưa đón tham quan</b><span>Đón khách từ TP. HCM</span></div></a>
+  </div>
+</div></section>
+
+<section class="sec alt" id="su-kien"><div class="wrap two">
+  <div>
+    <div class="head"><h2>Sự kiện trong năm</h2><a href="#">Tất cả</a></div>
+    <div class="ev"><div class="d"><b>Tháng Ba</b><span>âm lịch</span></div><div><a href="#">Lễ Cầu Siêu – Cầu An tiết Thanh Minh</a><p>Gia đình về thăm viếng, chỉnh trang mộ và dự lễ cầu nguyện.</p></div></div>
+    <div class="ev"><div class="d"><b>10/3</b><span>âm lịch</span></div><div><a href="#">Giỗ Tổ Hùng Vương</a><p>Hướng về cội nguồn, gìn giữ đạo lý uống nước nhớ nguồn.</p></div></div>
+    <div class="ev"><div class="d"><b>15/7</b><span>âm lịch</span></div><div><a href="#">Đại Lễ Vu Lan Báo Hiếu</a><p>Nghi thức báo hiếu, tưởng niệm tổ tiên, cầu an cho cha mẹ.</p></div></div>
+    <div class="ev"><div class="d"><b>Tháng Chạp</b><span>âm lịch</span></div><div><a href="#">Tảo mộ cuối năm</a><p>Mùa cao điểm, nên gọi trước để được hướng dẫn giờ đi.</p></div></div>
+  </div>
+  <div>
+    <div class="head"><h2>Bài viết mới</h2><a href="#">Tất cả</a></div>
+    <div class="post"><img src="assets/img/care-team.jpg" alt=""><div><a href="#">Hướng dẫn các bước cần thiết khi tổ chức tang lễ</a><span>17/09/2026</span></div></div>
+    <div class="post"><img src="assets/img/tp-courtyard.jpg" alt=""><div><a href="#">An táng hay hỏa táng: Gia đình nên cân nhắc điều gì?</a><span>17/09/2026</span></div></div>
+    <div class="post"><img src="assets/img/grave-care.jpg" alt=""><div><a href="#">Những điều cần lưu ý khi thăm viếng và chăm sóc khu mộ</a><span>17/09/2026</span></div></div>
+    <div class="post"><img src="assets/img/vu-lan.jpg" alt=""><div><a href="#">Thanh Minh và truyền thống tưởng nhớ tổ tiên</a><span>17/09/2026</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="dang-ky"><div class="wrap">
+  <div><h2>Đặt lịch tham quan và nhận báo giá</h2><p>Nhân viên gọi lại trong giờ làm việc để hẹn ngày, giờ xe đón và gửi danh sách vị trí còn trống.</p></div>
+  <form data-demo>
+    <input name="ten" autocomplete="name" placeholder="Họ và tên" required aria-label="Họ và tên">
+    <input name="sdt" type="tel" autocomplete="tel" placeholder="Số điện thoại" required aria-label="Số điện thoại">
+    <select class="full" name="khu" aria-label="Khu quan tâm"><option>Khu quan tâm: chưa rõ, cần tư vấn</option><option>Long Phụng Minh Đồ</option><option>Đại Lộ Vĩnh Hằng</option><option>Linh Hoa Tuệ Đàn</option><option>Song Thân</option><option>Trúc Lâm Bích Thủy</option><option>Lưu tro cốt</option></select>
+    <button class="full" type="submit">Gửi yêu cầu</button>
+  </form>
+</div></section>
+</main>
+
+<footer id="lien-he">
+  <div class="cols">
+    <div><h4>Hoa Viên Nghĩa Trang Bình Dương</h4><p>Công ty CP Đầu tư Xây dựng Chánh Phú Hòa</p><p>Khu phố Bông Trang, phường Chánh Phú Hòa, TP. HCM</p><p>Tổng đài <a href="tel:0818555444">0818 555 444</a> · cphaco.vn<br>7h30 – 17h00 tất cả các ngày</p></div>
+    <div><h4>Chi nhánh 1</h4><p>99 Điện Biên Phủ, P. Gia Định</p><p>(028) 35.127.898<br>0778.454.544</p></div>
+    <div><h4>Chi nhánh 2</h4><p>140C Nguyễn Cư Trinh, P. Cầu Ông Lãnh</p><p>(028) 3 838 2389</p></div>
+    <div><h4>Chi nhánh 3</h4><p>253D Lương Định Của, P. Bình Trưng</p><p>0947.542.279</p></div>
+  </div>
+  <div class="copy wrap">© 2026 Công ty CP Đầu tư Xây dựng Chánh Phú Hòa · Bản demo giao diện</div>
+</footer>
+<div class="callbar"><a href="tel:0818555444">Gọi 0818 555 444</a><a href="#dang-ky">Đặt lịch</a></div>
+
+<script>
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('#slides img')),cap=document.getElementById('cap'),dots=document.getElementById('dots'),i=0,t;
+  imgs.forEach(function(im,k){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ảnh '+(k+1));if(!k)b.className='on';b.onclick=function(){show(k);auto()};dots.appendChild(b)});
+  function show(n){imgs[i].classList.remove('on');dots.children[i].classList.remove('on');i=(n+imgs.length)%imgs.length;imgs[i].classList.add('on');dots.children[i].classList.add('on');cap.innerHTML=imgs[i].dataset.cap}
+  function auto(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(function(){show(i+1)},6000)}
+  auto();
+})();
+document.querySelector('.menu-btn').addEventListener('click',function(){var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)});
+document.querySelectorAll('form[data-demo]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();f.innerHTML='<p class="ok">Đã ghi nhận yêu cầu. Nhân viên sẽ gọi lại trong giờ làm việc.</p>'})});
+</script>
+</body>
+</html>

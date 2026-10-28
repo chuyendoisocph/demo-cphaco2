@@ -1,0 +1,45 @@
+p.body{margin-top:20px}
+
+/* hai đoạn mở đầu đặt cạnh nhau */
+.pintro{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.pull{margin:64px auto 0;max-width:860px;padding:32px 0 0;border-top:1px solid var(--ke);text-align:center;font-size:clamp(20px,2vw,25px);line-height:1.6;color:var(--xanh-sau);font-weight:500;text-wrap:balance}
+
+/* lợi ích theo hai nhóm */
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.groups article{background:#fff;box-shadow:0 0 0 1px var(--ke)}
+.groups .ph{aspect-ratio:16/8;overflow:hidden}
+.groups img{width:100%;height:100%;object-fit:cover}
+.groups .tx{padding:26px 30px 30px}
+.groups h3{font-size:22px;color:var(--xanh-sau)}
+.groups ol{list-style:none;counter-reset:l;margin-top:12px}
+.groups li{counter-increment:l;display:grid;grid-template-columns:36px 1fr;padding:12px 0;border-top:1px solid var(--ke);line-height:1.55}
+.groups li::before{content:counter(l,decimal-leading-zero);font-weight:700;color:var(--gach)}
+
+/* 6 bước trên nền xanh */
+.guide6{background:var(--xanh-sau);color:#c8d6e6;padding:96px 0}
+.guide6 .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:start}
+.guide6 .title{color:#fff}
+.guide6 p{margin-top:18px}
+.guide6 .btn{margin-top:30px}
+.guide6 ol{list-style:none;counter-reset:s;border-top:1px solid rgba(255,255,255,.16)}
+.guide6 li{counter-increment:s;display:grid;grid-template-columns:64px 1fr;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.16);color:#fff;font-size:18px;font-weight:500;line-height:1.45}
+.guide6 li::before{content:counter(s);font-size:30px;font-weight:700;color:#e39a7d;line-height:1}
+
+.reads.three{grid-template-columns:repeat(3,1fr)}
+.paths.three{grid-template-columns:repeat(3,1fr);margin-top:36px}
+.paths.three a{grid-template-columns:96px 1fr 20px;gap:16px}
+.paths.three img{width:96px;height:72px}
+
+@media (max-width:1080px){
+  .pintro,.groups,.guide6 .wrap{grid-template-columns:1fr;gap:40px}
+  .reads.three{grid-template-columns:1fr 1fr}
+  .paths.three{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .pull{margin-top:44px;text-align:left}
+  .groups .tx{padding:22px 20px 24px}
+  .guide6{padding:64px 0}
+  .guide6 li{grid-template-columns:48px 1fr;font-size:16.5px}
+  .guide6 li::before{font-size:24px}
+  .reads.three{grid-template-columns:1fr}
+}
