@@ -40,7 +40,7 @@ def resp(html):
 
 def svg(html):
     # icon trang trí: ẩn với trình đọc màn hình (chữ bên cạnh đã nói đủ nghĩa)
-    return re.sub(r'<svg(?![^>]*(?:aria-hidden|aria-label|role)=)',r'<svg aria-hidden="true"',html)
+    return re.sub(r'<svg(?![^>]*(?:aria-hidden|aria-label|role)=)',r'<svg aria-hidden="true"',html)
 
 def hero(html):
     # ảnh đầu trang con tải trước

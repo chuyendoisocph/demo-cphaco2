@@ -1,0 +1,12 @@
+# chỉ đưa lên Vercel bản trang chủ đã chọn (trang-chu.html) cùng các trang con
+index.html
+trang-chu-*.html
+phuong-an/
+
+# mã nguồn dựng trang và tài liệu nội bộ
+_src/
+*.md
+skills-lock.json
+.hallmark/
+.claude/
+.impeccable/
