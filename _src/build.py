@@ -175,7 +175,7 @@ build('bai-viet','Bài viết – Hoa Viên Bình Dương',
 build('chinh-sach-quyen-rieng-tu','Chính sách quyền riêng tư – Hoa Viên Bình Dương',
       'Cách Hoa Viên Bình Dương thu thập, sử dụng, bảo mật và chia sẻ dữ liệu cá nhân của khách hàng, cùng quyền truy cập và chỉnh sửa dữ liệu của quý khách.',
       'chinh-sach-quyen-rieng-tu.html',cta=False)
-TOUR_JS='<script src="assets/vendor/pannellum.js"></script><script>var TOUR='+open('_src/tour.json',encoding='utf-8').read()+'</script><script src="assets/tour.js"></script>'
+TOUR_JS='<script src="assets/vendor/pannellum.js"></script><script>var TOUR='+open('_src/tour.json',encoding='utf-8').read()+'</script><script src="assets/tour.js?v='+hashlib.md5(open('assets/tour.js','rb').read()).hexdigest()[:8]+'"></script>'
 build('tham-quan-360','Tham quan Hoa Viên 360° – Hoa Viên Bình Dương',
       'Khám phá Hoa Viên Bình Dương qua ảnh toàn cảnh 360° chụp bằng flycam: cổng hoa viên, Đại Lộ Vĩnh Hằng, Vĩnh Hằng Đài, Chùa Thiên Phước và các khu mộ.',
       'tham-quan-360.html','Tham quan, tìm hiểu khu mộ',TOUR_JS)

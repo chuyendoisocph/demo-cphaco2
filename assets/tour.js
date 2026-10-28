@@ -2,6 +2,8 @@
 (function(){
   if(!window.pannellum||!window.TOUR)return;
   var DEG=Math.PI/180,R=6371000,HFOV=100,MARGIN=6;
+  // tự xoay chậm từ trái sang phải khi người xem không thao tác (trừ ảnh ngoài cổng, và khi máy bật giảm chuyển động)
+  var ROT=matchMedia('(prefers-reduced-motion: reduce)').matches?false:-3,NO_ROT={'cong-1':1};
   var byId={};TOUR.forEach(function(s,i){s.no=i;byId[s.id]=s});
   function norm(d){return((d+180)%360+360)%360-180}
   function bearing(a,b){var dl=(b.lon-a.lon)*DEG,y=Math.sin(dl)*Math.cos(b.lat*DEG),x=Math.cos(a.lat*DEG)*Math.sin(b.lat*DEG)-Math.sin(a.lat*DEG)*Math.cos(b.lat*DEG)*Math.cos(dl);return Math.atan2(y,x)/DEG}
@@ -45,6 +47,14 @@
   }
   function go(id){if(id!==viewer.getScene())viewer.loadScene(id)}
   viewer.on('scenechange',show);show(start);
+  // chỉ bắt đầu xoay sau IDLE ms không thao tác (kể cả ngay sau khi mở ảnh); mọi lần chạm, kéo, cuộn, gõ phím đều đếm lại
+  var IDLE=4000,idle;
+  function wait(){
+    clearTimeout(idle);viewer.stopAutoRotate();
+    if(ROT&&!NO_ROT[viewer.getScene()])idle=setTimeout(function(){viewer.startAutoRotate(ROT,viewer.getPitch())},IDLE);
+  }
+  ['pointerdown','pointerup','wheel','keydown','touchstart','touchend'].forEach(function(e){$('pano').addEventListener(e,wait,{passive:true})});
+  viewer.on('load',wait);
   $('t-next').onclick=function(){go(TOUR[(byId[viewer.getScene()].no+1)%TOUR.length].id)};
   $('t-prev').onclick=function(){go(TOUR[(byId[viewer.getScene()].no+TOUR.length-1)%TOUR.length].id)};
   // chọn điểm trong danh sách: cuộn lên khung ảnh rồi mở
