@@ -496,3 +496,30 @@ form .ok:focus{outline:none}
 .crumb a,footer p a,footer .branches a,.ev div>a,dd>a,th>a,.way a,.fcall a,.side-call a{display:inline-block;padding-block:3px}
 form .note-send{grid-column:1/-1;margin:0;padding:12px 14px;background:var(--gach-nhat);border:1px solid #E7C9BC;color:var(--chu);font-size:15px;line-height:1.55}
 form .note-send:focus{outline:none}
+
+/* hộp chọn số gọi: mở từ nút Nhận báo giá / tư vấn */
+.goi{margin:auto;width:min(520px,calc(100% - 32px));max-height:calc(100% - 32px);border:0;padding:0;background:#fff;color:var(--chu);box-shadow:0 30px 70px -20px rgba(5,16,28,.55);border-radius:4px}
+.goi::backdrop{background:rgba(8,18,28,.62)}
+.goi[open]{animation:goi-in .22s ease-out}
+@keyframes goi-in{from{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){.goi[open]{animation:none}}
+.goi-h{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:24px 24px 0}
+.goi-h small{display:block;color:var(--gach);font-weight:600;font-size:14.5px;line-height:1.4}
+.goi-h h2{color:var(--xanh-sau);font-size:24px;line-height:1.3;margin-top:4px}
+.goi-x{flex:none;display:grid;place-items:center;width:40px;height:40px;margin:-6px -8px 0 0;border:0;background:none;color:var(--phu);cursor:pointer;border-radius:3px}
+.goi-x:hover{background:var(--nen);color:var(--chu)}
+.goi-chinh{display:flex;align-items:center;gap:14px;margin:18px 24px 0;padding:16px 18px;background:var(--gach);color:#fff;text-decoration:none;border-radius:3px;transition:background .25s}
+.goi-chinh:hover{background:var(--gach-dam)}
+.goi-chinh i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.16)}
+.goi-chinh small{display:block;font-size:14px;opacity:.9;line-height:1.4}
+.goi-chinh b{display:block;font-size:26px;letter-spacing:.01em;line-height:1.25}
+.goi-l{margin:22px 24px 6px;color:var(--phu);font-size:14.5px;font-weight:600}
+.goi-cn{list-style:none;margin:0 24px;border-top:1px solid var(--ke)}
+.goi-cn li{display:flex;justify-content:space-between;align-items:center;gap:6px 16px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--ke)}
+.goi-cn b{display:block;font-size:16px;color:var(--xanh-sau);line-height:1.4}
+.goi-cn span{display:block;font-size:14.5px;color:var(--nhat);line-height:1.45}
+.goi-cn p{display:flex;flex-wrap:wrap;gap:6px}
+.goi-cn p a{padding:7px 12px;font-weight:600;font-size:15.5px;text-decoration:none;color:var(--xanh-dam);box-shadow:inset 0 0 0 1.5px #c9d6e3;border-radius:3px;white-space:nowrap;transition:box-shadow .2s,background .2s}
+.goi-cn p a:hover{box-shadow:inset 0 0 0 1.5px var(--xanh);background:var(--xanh-nhat)}
+.goi-f{margin:16px 24px 24px;font-size:15px;color:var(--phu);line-height:1.6}
+.goi-f a{font-weight:600}

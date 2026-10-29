@@ -159,3 +159,24 @@ document.querySelectorAll('#player,#mapbox').forEach(function(box){
   // ảnh tải chậm làm đổi chiều cao trang: tính lại vị trí kích hoạt
   addEventListener('load',function(){ScrollTrigger.refresh()});
 })();
+
+/* nút Nhận báo giá / tư vấn: mở hộp chọn số gọi (không có JS thì vẫn tới form như cũ) */
+(function(){
+  var d=document.getElementById('goi');if(!d||!d.showModal)return;
+  var ctx=document.getElementById('goi-ctx'),def=ctx.textContent;
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-goi]');if(!b)return;
+    e.preventDefault();
+    var t=b.dataset.goi;
+    // nút trong thẻ khu mộ: lấy tên khu làm tiêu đề phụ
+    if(!t){var h=b.closest('section,article,.zone,div');while(h&&!h.querySelector('h2,h3'))h=h.parentElement;h=h&&h.querySelector('h2,h3');t=/báo giá/i.test(b.textContent)&&h?'Báo giá '+h.textContent.trim():def}
+    ctx.textContent=t;d.showModal();
+  });
+  d.addEventListener('click',function(e){
+    if(!(e.target===d||e.target.closest('[data-dong]')))return;
+    d.close();
+    // "Để lại số": đóng hộp xong mới cuộn tới form, vì đóng hộp sẽ trả focus về nút cũ
+    var a=e.target.closest('a[href^="#"]'),f=a&&document.querySelector(a.getAttribute('href'));
+    if(f){e.preventDefault();f.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});var i=f.querySelector('input');if(i)i.focus({preventScroll:true})}
+  });
+})();
